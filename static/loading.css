@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+.hdti-bg {
+    width: 370px;
+    height: 650px;
+    position: relative;
+    background: url('../static/img/HDTI2.svg') center no-repeat;
+    background-size: contain;
+}
+
+.hdti-title {
+    position: absolute;
+    top: 90px;
+    left: 53.3px;
+    width: 133.3px;
+}
+
+.hdti-click {
+    position: absolute;
+    top: 153.3px;
+    left: 73.3px;
+    width: 93.3px;
+}
+
+.hdti-joystick {
+    position: absolute;
+    top: 259.3px;
+    left: 95.8px;
+    width: 115.3px;
+    cursor: pointer;
+}

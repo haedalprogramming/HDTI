@@ -16,7 +16,7 @@ body {
   height: 64vh;
   margin: 80px;
   position: relative;
-  perspective: 1000px;
+  perspective: 200px;
 }
 
 .cube-wrap {
@@ -76,6 +76,7 @@ body {
   color: gray;
   text-align: center;
   transition: 1s;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* .cube__face--1  { transform: rotateX(  0deg) translateZ(100px); }
