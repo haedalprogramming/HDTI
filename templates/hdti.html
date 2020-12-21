@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/hdti.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="cube is-backface-hidden">
+            <div class="cube__face cube__face--1">1</div>
+            <div class="cube__face cube__face--2">6</div>
+            <div class="cube__face cube__face--3">5</div>
+            <div class="cube__face cube__face--4">4</div>
+            <div class="cube__face cube__face--5">3</div>
+            <div class="cube__face cube__face--6">2</div>
+        </div>
+    </div>
+    <button id="nextBtn">다음</button>
+    <script>
+        const faces = document.querySelectorAll('.cube__face')
+        const nextBtn = document.querySelector('#nextBtn')
+        let indices = [0, 60, 120, 180, 240, 300];
+        nextBtn.addEventListener('click', function(e) {
+            for(let i=0; i<faces.length; i++){
+                indices[i] = indices[i] + 60 + 360 * 3;
+                faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(100px)';
+            }
+        });
+    </script>
+</body>
+</html>
