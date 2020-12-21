@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172.02" height="175.008" viewBox="0 0 172.02 175.008">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        opacity: 0.21;
+      }
+
+      .cls-2 {
+        fill: #d80000;
+      }
+
+      .cls-3 {
+        fill: url(#pattern);
+      }
+
+      .cls-4 {
+        fill: url(#pattern-2);
+      }
+
+      .cls-5 {
+        fill: url(#pattern-3);
+      }
+
+      .cls-6 {
+        fill: #c8c7c7;
+      }
+
+      .cls-7 {
+        fill: #747474;
+      }
+
+      .cls-8 {
+        fill: #e3e3e3;
+      }
+
+      .cls-9 {
+        fill: url(#pattern-4);
+      }
+
+      .cls-10 {
+        fill: url(#pattern-5);
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-12 {
+        fill: #525252;
+      }
+    </style>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 60 60">
+      <image width="60" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABHNCSVQICAgIfAhkiAAAAQxJREFUaEPtmlkSgyAQROX+F8xtkkrlx4UCu4YIDc9fB53p12xKem1/v97BN6Rg+0PzRMEt5fw9C8KipsNZOkpQrP8SLgnSog9TcBSZ2B7CJcHuWLq3ZUXgW5E4BWfkhLDqsYfjl7P0Wd+DADP2YQreKwDhBrubh8co7XU5wm7TkFQxBWNpyTDjB2NpLD2+S6UMv5aeehq6rDMpWDKIXzCW9mOmZQxhTS+/aAj7MdMyhrCml180hP2YaRlDWNPLL3pJwmdMU++P+abFNy2/camYMZbG0ljaWwF+iGf4uS9EONRS65TLEXZba4cPplFwrQ90vg/hPYA783ANWO9BjRPxJUIQrvl3wJWYZOkPvj5uvVm81NAAAAAASUVORK5CYII="/>
+    </pattern>
+    <pattern id="pattern-2" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 96.24, 0)" viewBox="0 0 48.12 48.12">
+      <use preserveAspectRatio="none" xlink:href="#image-2"/>
+    </pattern>
+    <pattern id="pattern-3" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 78.278, 0)" viewBox="0 0 39.139 39.139">
+      <use preserveAspectRatio="none" xlink:href="#image-3"/>
+    </pattern>
+    <pattern id="pattern-4" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 138.293, 0)" viewBox="0 0 69.146 69.146">
+      <use preserveAspectRatio="none" xlink:href="#image"/>
+    </pattern>
+    <image id="image" preserveAspectRatio="none" width="69.146" height="69.146" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAABQElEQVRoBeXBwQ2DMAAEMN/+Q1+/KA8iRCtKYsePlbohxBfFj5W6IcQXxY+VuiHEF8WPlbohxBfFTaUeFOKCuKnUg0JcEDeVelCIC+KmUg8KcUFMlHqRECdiotSLhDgRE6VeJMSJmCj1IiFOxESpFwtxEBOlXizEQUyUerEQBzFR6sVCHMSg1MJiUGphMSi1sBiUWlgMSi0sBqUWFoNSC4tBqYWl1EZSaiMptZGU2khKbSSlNpJSG0mpjaTURlJqIym1kZTaSEptJKU2klIbSamNxKDUwmJQamExKLWwGJRaWAxKLSwGpRYWg1ILi0GphcVEqRcLcRATpV4sxEFMlHqxEAcxUerFQhzERaX+WIgTcVGpPxbiRFxU6o+FOBEXlfpjIU7ETaUeFOKCuKnUg0JcEDeVelCIC+KmUg8KccEHyUt3/cg3fPwAAAAASUVORK5CYII="/>
+    <pattern id="pattern-5" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 138.293, 0)" viewBox="0 0 69.146 69.146">
+      <use xlink:href="#image"/>
+    </pattern>
+    <image id="image-2" preserveAspectRatio="none" width="48.12" height="48.12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABHNCSVQICAgIfAhkiAAAAQ1JREFUaEPtmkkShCAQBOUx/P+JMzExFxcCrACFgvRqo92VxaaEGOP28PWpfH6obH9oHii4pZz/Z0FY1HQ4S9cSFOu/hEuCtOjDFFyLTGwP4Zxgdyzd27Ii8C1LnIITckJY9djL8ctZ+qzvQYAZ+zAF7xWAcIPdzctjlPa6FGG3aUiqmIKxtGSY8YOxNJYe36VShj9LTz0NXdaZFCwZxC8YS/sx0zKGsKaXXzSE/ZhpGUNY08svGsJ+zLSMIazp5Re9JOEzpqn3x3zT4puW37iUzRhLY2ks7a0AP8QT/NwXIhxqKXXK5Qi7rbWrD6ZRcKkPdL4P4T2AO/NwCVjvQY0T8TlCEC75d8CVmGTpL/gzViHwJ/2BAAAAAElFTkSuQmCC"/>
+    <image id="image-3" preserveAspectRatio="none" width="39.139" height="39.139" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABHNCSVQICAgIfAhkiAAAAQlJREFUaEPtmlESgyAMRMsVc/+70On0p7UOmCGVhTy/NZJ9m4BOSq31kekqJLw57nyEzWyU6ewmUDwJFBL2yPW+F8J+zYaeCLf0bIJeNZoCXKlhEvZKfvP9EP4UfEdLHw31RZyET+pttaYF4V4Nr060uSmc1TAJ37yP/vV1EBb4+oFwpAJYOoOlt96Gfo5dZkbCkU1CLdaraUFYjUrkeiAcqaZiLAgrUolcE4Qj1VSMBWFFKpFrgnCkmoqxUhI+gtj6Y4JfPBl+8WBpxe4atSZqmBqO8pJIHEYeGHmYP0s5WgxM8XgVVD9rD0/irXYSI+He2FLP4uksrWbx8AFxdeIk3CJ05Wi5FeEnSsJ54Y37ybIAAAAASUVORK5CYII="/>
+  </defs>
+  <g id="그룹_72" data-name="그룹 72" transform="translate(-145.382 -381)">
+    <g id="그룹_60" data-name="그룹 60">
+      <image id="d78ab3f552bcd84c683a6252a05ad78a" class="cls-1" width="69.146" height="69.146" transform="translate(317.402 503.506) rotate(160)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABHNCSVQICAgIfAhkiAAAAQxJREFUaEPtmlkSgyAQROX+F8xtkkrlx4UCu4YIDc9fB53p12xKem1/v97BN6Rg+0PzRMEt5fw9C8KipsNZOkpQrP8SLgnSog9TcBSZ2B7CJcHuWLq3ZUXgW5E4BWfkhLDqsYfjl7P0Wd+DADP2YQreKwDhBrubh8co7XU5wm7TkFQxBWNpyTDjB2NpLD2+S6UMv5aeehq6rDMpWDKIXzCW9mOmZQxhTS+/aAj7MdMyhrCml180hP2YaRlDWNPLL3pJwmdMU++P+abFNy2/camYMZbG0ljaWwF+iGf4uS9EONRS65TLEXZba4cPplFwrQ90vg/hPYA783ANWO9BjRPxJUIQrvl3wJWYZOkPvj5uvVm81NAAAAAASUVORK5CYII="/>
+      <rect id="사각형_111" data-name="사각형 111" class="cls-2" width="9" height="83" transform="matrix(0.407, 0.914, -0.914, 0.407, 238.52, 489.035)"/>
+      <rect id="d78ab3f552bcd84c683a6252a05ad78a-2" data-name="d78ab3f552bcd84c683a6252a05ad78a" class="cls-3" width="67.12" height="66.12" transform="translate(160.256 476.484) rotate(13)"/>
+    </g>
+    <g id="그룹_58" data-name="그룹 58" transform="translate(324 -690.515)">
+      <g id="그룹_52" data-name="그룹 52" transform="translate(-176.268 1175.975)">
+        <use id="d78ab3f552bcd84c683a6252a05ad78a-3" data-name="d78ab3f552bcd84c683a6252a05ad78a" transform="translate(0 0)" xlink:href="#image-2"/>
+        <rect id="d78ab3f552bcd84c683a6252a05ad78a-4" data-name="d78ab3f552bcd84c683a6252a05ad78a" class="cls-4" width="48.12" height="48.12" transform="translate(16.046 0)"/>
+      </g>
+      <g id="그룹_53" data-name="그룹 53" transform="translate(-166.993 1171.398)">
+        <use id="d78ab3f552bcd84c683a6252a05ad78a-5" data-name="d78ab3f552bcd84c683a6252a05ad78a" transform="translate(9.067 0)" xlink:href="#image-3"/>
+        <rect id="d78ab3f552bcd84c683a6252a05ad78a-6" data-name="d78ab3f552bcd84c683a6252a05ad78a" class="cls-5" width="39.139" height="39.139" transform="translate(0 0)"/>
+      </g>
+      <g id="그룹_57" data-name="그룹 57" transform="translate(435.363 138.885) rotate(22)">
+        <g id="그룹_49" data-name="그룹 49" transform="translate(-148.713 1108.745)">
+          <rect id="사각형_111-2" data-name="사각형 111" class="cls-6" width="9" height="83" transform="translate(-0.287 3.254)"/>
+          <rect id="사각형_112" data-name="사각형 112" class="cls-7" width="5" height="86" transform="translate(3.713 0.254)"/>
+          <rect id="사각형_113" data-name="사각형 113" class="cls-8" height="86" transform="translate(1.713 0.254)"/>
+        </g>
+        <g id="그룹_50" data-name="그룹 50" transform="translate(-180.348 1078.74)">
+          <g id="그룹_48" data-name="그룹 48" transform="translate(0 0)">
+            <g id="그룹_46" data-name="그룹 46" transform="translate(0)">
+              <use id="d78ab3f552bcd84c683a6252a05ad78a-7" data-name="d78ab3f552bcd84c683a6252a05ad78a" xlink:href="#image"/>
+              <rect id="d78ab3f552bcd84c683a6252a05ad78a-8" data-name="d78ab3f552bcd84c683a6252a05ad78a" class="cls-9" width="69.146" height="69.146" transform="translate(2.701)"/>
+            </g>
+            <g id="그룹_47" data-name="그룹 47" transform="translate(71.847 71.955) rotate(180)">
+              <use id="d78ab3f552bcd84c683a6252a05ad78a-9" data-name="d78ab3f552bcd84c683a6252a05ad78a" transform="translate(0 0)" xlink:href="#image"/>
+              <rect id="d78ab3f552bcd84c683a6252a05ad78a-10" data-name="d78ab3f552bcd84c683a6252a05ad78a" class="cls-10" width="69.146" height="69.146" transform="translate(2.701 0)"/>
+            </g>
+          </g>
+          <image id="d78ab3f552bcd84c683a6252a05ad78a-11" data-name="d78ab3f552bcd84c683a6252a05ad78a" width="44.101" height="44.101" transform="translate(21.573 23.835)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABHNCSVQICAgIfAhkiAAAARpJREFUaEPtmUkOwyAMRUHKnXL/Ze+ERFeVAFU4MTO8blMi/mQ7YL335qSfBfDmcqNwKvDnukZrLhUZm9vg7Vz0WFQYwP31RuGE8+MsnXouImDHDAM4ZACFpdFygbaU7Ru3c1Gmd+jDAE4yjMJZS5Dh+UZLMkyGAwZoSwseAJDh0zLM52Go+I5FC4VROFfXmaWZpZszIJ1LM3icNnhEinOm1fjUsih/NapDb4UBXEO1N+9AYTKc+KVwtGyZ4ey98A9G78s0AL8pOMJ/UfgfQVh64SqNpbG0MYYMP8hwy15a0qWaZXgU4EeAJMY0lgawxGql58MUTvffS3EAa5yjyTAKa5hWrBljacVGp14i3g9PvXvF5gCsIG2pJV+xxIOYYByTggAAAABJRU5ErkJggg=="/>
+          <rect id="사각형_114" data-name="사각형 114" class="cls-11" width="5" height="5" transform="translate(43.348 11.26)"/>
+        </g>
+      </g>
+      <rect id="사각형_115" data-name="사각형 115" class="cls-12" width="23" height="11" transform="translate(-156 1190)"/>
+    </g>
+  </g>
+</svg>

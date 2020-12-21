@@ -10,24 +10,54 @@
 </head>
 <body>
     <div class="scene">
-        <div class="cube is-backface-hidden">
-            <div class="cube__face cube__face--1">1</div>
-            <div class="cube__face cube__face--2">6</div>
-            <div class="cube__face cube__face--3">5</div>
-            <div class="cube__face cube__face--4">4</div>
-            <div class="cube__face cube__face--5">3</div>
-            <div class="cube__face cube__face--6">2</div>
+        <div class="cube-wrap">
+            <div class="cube is-backface-hidden">
+                <div class="cube-bg cube-bg__1"></div>
+                <div class="cube-bg cube-bg__2"></div>
+                <div class="cube-bg cube-bg__3"></div>
+                <div class="cube-bg cube-bg__4"></div>
+                <div class="cube-bg cube-bg__5"></div>
+            </div>
         </div>
     </div>
     <button id="nextBtn">다음</button>
     <script>
+        const cube = document.querySelector('.cube');
+        for (let i=0; i<38; i++) {
+            const face = document.createElement('div');
+            face.innerText = i+1; 
+            face.classList.add('cube__face');
+            // face.classList.add('cube__face--'+(i+1));
+            cube.appendChild(face)
+        }
+
         const faces = document.querySelectorAll('.cube__face')
         const nextBtn = document.querySelector('#nextBtn')
-        let indices = [0, 60, 120, 180, 240, 300];
+        let indices = [];
+        let indice = 0
+        for (let i=0; i<38; i++) {
+            indices.push(indice);
+            indice += 9.473684210526316;
+        }
+        // console.log(indices);
+
+        for (let i=0; i<38; i++) {
+            // faces[36].style.background = 'rgba(255, 255, 255, 0.17)';
+            // faces[37].style.background = 'rgba(255, 255, 255, 0.23)';
+            // faces[0].style.background = 'rgba(255, 255, 255, 0.7)';
+            // faces[1].style.background = 'rgba(255, 255, 255, 0.23)';
+            // faces[2].style.background = 'rgba(255, 255, 255, 0.17)';
+            faces[37].style.background = 'orange';
+            faces[0].style.background = 'yellow';
+            faces[0].style.color = 'red';
+            faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(200px)';
+        }
+
         nextBtn.addEventListener('click', function(e) {
             for(let i=0; i<faces.length; i++){
-                indices[i] = indices[i] + 60 + 360 * 3;
-                faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(100px)';
+                indices[i] += 9.473684210526316;
+                // indices[i] = indices[i] + 60 + 360 * 3;
+                faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(200px)';
             }
         });
     </script>
