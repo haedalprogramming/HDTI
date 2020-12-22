@@ -26,7 +26,6 @@
         <div class="question_title">
             <div class="titles"><p>매우 그렇다</p></div>
             <div class="titles"><p>조금 그렇다</p></div>
-            <div class="titles"><p>보통이다</p></div>
             <div class="titles"><p>조금 아니다</p></div>
             <div class="titles"><p>매우 아니다</p></div>
         </div>
@@ -36,10 +35,6 @@
                     <p>{{ loop.index }}. {{ question }}</p>
                 </div>
                 <div class="checkboxes">
-                    <div class="checkbox">
-                        <input type="radio" id='"q"+ {{ loop.index }} + "5"' name='q{{ loop.index0 }}' value=5>
-                        <label for='"q"+ {{ loop.index }} + "5"'></label>
-                    </div>
                     <div class="checkbox">
                         <input type="radio" id='"q"+ {{ loop.index }} + "4"' name='q{{ loop.index0 }}' value=4>
                         <label for='"q"+ {{ loop.index }} + "4"'></label>
@@ -63,10 +58,6 @@
                     <p>{{ loop.index }}. {{ track }}</p>
                 </div>
                 <div class="checkboxes">
-                    <div class="checkbox">
-                        <input type="radio" id='"t"+ {{ loop.index }} + "5"' name='t{{ loop.index0 }}' value=5>
-                        <label for='"t"+ {{ loop.index }} + "5"'></label>
-                    </div>
                     <div class="checkbox">
                         <input type="radio" id='"t"+ {{ loop.index }} + "4"' name='t{{ loop.index0 }}' value=4>
                         <label for='"t"+ {{ loop.index }} + "4"'></label>
