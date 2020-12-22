@@ -19,6 +19,13 @@
                 <div class="cube-bg cube-bg__5"></div> -->
             </div>
         </div>
+        <div class="btns">
+            <img class="answer-btn1" src="../static/img/버튼_1.svg" alt="버튼">
+            <img class="answer-btn2" src="../static/img/버튼_2.svg" alt="버튼">
+            <img class="answer-btn3" src="../static/img/버튼_3.svg" alt="버튼">
+            <img class="answer-btn4" src="../static/img/버튼_4.svg" alt="버튼">
+            <img class="haedal-btn" src="../static/img/버튼_haedal.png" alt="버튼">
+        </div>
     </div>
     <button id="nextBtn">다음</button>
     <script>
@@ -66,21 +73,13 @@
                 faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
             } 
 
-            // console.log(8-i-1 < 0 ? 8-i-1 + 10 : 8-i-1);
-            // console.log(2-i-1 < 0 ? 2-i-1 + 10 : 2-i-1);
-            // console.log(9-i-1 < 0 ? 9-i-1 + 10 : 9-i-1);
-            // console.log(1-i-1 < 0 ? 1-i-1 + 10 : 1-i-1);
-            console.log(i-2 < 0 ? i-2 + 10 : i-2);
-            console.log(i-8 < 0 ? i-8 + 10 : i-8);
-            console.log(i-1 < 0 ? i-1 + 10 : i-1);
-            console.log(i-9 < 0 ? i-9 + 10 : i-9);
-            console.log(i-1 < 0 ? 9 : i-1);
             i = i-1 < 0 ? 9 : i-1
 
             //1, 5번
             faces[i-2 < 0 ? i-2 + 10 : i-2].style.background = 'rgba(255, 255, 255, 0.17)';
             faces[i-2 < 0 ? i-2 + 10 : i-2].style.fontWeight = 'normal';
             faces[i-2 < 0 ? i-2 + 10 : i-2].style.color = 'rgba(255, 255, 255, 0.33)';
+            
             faces[i-8 < 0 ? i-8 + 10 : i-8].style.background = 'rgba(255, 255, 255, 0.17)';
             faces[i-8 < 0 ? i-8 + 10 : i-8].style.fontWeight = 'normal';
             faces[i-8 < 0 ? i-8 + 10 : i-8].style.color = 'rgba(255, 255, 255, 0.33)';
@@ -99,7 +98,7 @@
             faces[i].style.fontWeight = 'bold';
             faces[i].style.color = '#fff';
 
-            //5번에서 innerText로 질문 바꾸기
+            //5번에서 질문 바꾸기
             faces[5].innerText ='질문 바꼈지롱'
         });
     </script>
