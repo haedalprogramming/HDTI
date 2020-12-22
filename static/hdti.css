@@ -33,19 +33,6 @@ body {
   height: 100%;
 }
 
-/*
-.cube-bg__1, .cube-bg__5 {
-    background: rgba(255, 255, 255, 0.17);
-}
-
-.cube-bg__2, .cube-bg__4 {
-    background: rgba(255, 255, 255, 0.23);
-}
-
-.cube-bg__3 {
-    background: rgba(255, 255, 255, 0.3);
-} */
-
 .cube__face {
   position: absolute;
   width:100%;
