@@ -18,22 +18,57 @@ body {
 
 .hdti-title {
     position: absolute;
-    top: 90px;
-    left: 53.3px;
-    width: 133.3px;
+    top: 136px;
+    left: 80px;
+    width: 200px;
 }
 
 .hdti-click {
     position: absolute;
-    top: 153.3px;
-    left: 73.3px;
-    width: 93.3px;
+    top: 230px;
+    left: 110px;
+    width: 140px;
+}
+
+.hdti-red {
+    position: absolute;
+    top: 284px;
+    left: 150px;
+    width: 59px;
+}
+
+.hdti-rights {
+    position: absolute;
+    top: 309px;
+    left: 75px;
+    width: 210px;
 }
 
 .hdti-joystick {
     position: absolute;
-    top: 259.3px;
-    left: 95.8px;
-    width: 115.3px;
+    top: 389px;
+    left: 143.7px;
+    width: 165.1px;
     cursor: pointer;
+}
+
+.info-comment {
+    position: absolute;
+    top: 176px;
+    left: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.info-comment p {
+    margin: 0;
+}
+
+.info-time {
+    position: absolute;
+    top: 350px;
+    left: 81px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
 }

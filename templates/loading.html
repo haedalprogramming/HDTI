@@ -10,24 +10,35 @@
 </head>
 <body>
     <div class="hdti-bg">
-        <img class="hdti-title" src="../static/img/타이틀.svg" alt="title">
-        <img class="hdti-click" src="../static/img/CLICK_JOYSTICK.gif" alt="click-joystick">
+        <!-- <img class="hdti-title" src="../static/img/타이틀.svg" alt="title"> -->
+        <div class="hdti-etc">
+            <img class="hdti-click" src="../static/img/CLICK_JOYSTICK.gif" alt="click-joystick">
+            <img class="hdti-red" src="../static/img/haedal_red.svg" alt="title">
+            <img class="hdti-rights" src="../static/img/haedal_rights.svg" alt="title">
+        </div>
+        
         <img class="hdti-joystick" src="../static/img/조이스틱.svg" alt="조이스틱">
     </div>
     
     <script>
         const joyStick = document.querySelector('.hdti-joystick');
-        const clickComment = document.querySelector('.hdti-click');
+        const clickComment = document.querySelector('.hdti-etc');
 
         joyStick.addEventListener('click', function () {
-            const infoComment = document.createElement('p');
-            infoComment.innerText = '어쩌고저쩌고..'
+            const infoComment = document.createElement('div');
+            infoComment.innerHTML = `<div class="info-comment"><P>안녕하세요 개발자님.</P>
+                                    <P>HDTI 유형 검사를 시작하겠습니다.</P>
+                                    <P>문항을 잘 읽고</P>
+                                    <P>질문에 따른 본인의 성향을</P>
+                                    <P>선택하여 주세요.</P>
+                                    <P>지나친 생각은 정확한</P>
+                                    <P>검사 결과를 해칠 수 있습니다 ...</P></div>
+                                    <p class="info-time">해당 검사는 12분 정도 소요됩니다.</p>`
             joyStick.src = '../static/img/조이스틱_눕힌거.svg'
 
             setTimeout(function() {
-                clickComment.style.display = 'none';
-                //infoComment 추가하기
-            }, 1000);
+                clickComment.innerHTML = infoComment.innerHTML;
+            }, 700);
 
         })
     </script>
