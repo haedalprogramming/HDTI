@@ -23,7 +23,7 @@
     <button id="nextBtn">다음</button>
     <script>
         const cube = document.querySelector('.cube');
-        for (let i=0; i<14; i++) {
+        for (let i=0; i<10; i++) {
             const face = document.createElement('div');
             face.innerText = i+1 + '. 말도 안되는 요구를 해서 자주 빠꾸를 먹는다'; 
             face.classList.add('cube__face');
@@ -35,35 +35,35 @@
         const nextBtn = document.querySelector('#nextBtn')
         let indices = [];
         let indice = 0
-        for (let i=0; i<14; i++) {
+        for (let i=0; i<10; i++) {
             indices.push(indice);
             // indice += 9.473684210526316;
-            indice += 25.71428571428571;
+            indice += 36;
         }
         // console.log(indices);
 
-        for (let i=0; i<14; i++) {
-            faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(150px)';
+        for (let i=0; i<10; i++) {
+            faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
             //3번
             faces[0].style.background = 'rgba(255, 255, 255, 0.7)';
             faces[0].style.fontWeight = 'bold';
             faces[0].style.color = '#fff';
 
             //2, 4번
-            faces[13].style.background = 'rgba(255, 255, 255, 0.23)';
+            faces[9].style.background = 'rgba(255, 255, 255, 0.23)';
             faces[1].style.background = 'rgba(255, 255, 255, 0.23)';
 
             //1, 5번
-            faces[12].style.background = 'rgba(255, 255, 255, 0.17)';
+            faces[8].style.background = 'rgba(255, 255, 255, 0.17)';
             faces[2].style.background = 'rgba(255, 255, 255, 0.17)';
         }
 
         nextBtn.addEventListener('click', function(e) {
             for(let i=0; i<faces.length; i++){
-                indices[i] += 25.71428571428571;
+                indices[i] += 36;
                 // indices[i] += 9.473684210526316;
                 // indices[i] = indices[i] + 60 + 360 * 3;
-                faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(150px)';
+                faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
             }
         });
     </script>
