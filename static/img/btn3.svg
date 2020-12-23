@@ -1,5 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58.23" height="60.23" viewBox="0 0 58.23 60.23">
   <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.35;
+      }
+
+      .cls-2 {
+        fill: url(#pattern);
+      }
+
+      .cls-3 {
+        fill: url(#pattern-2);
+      }
+
+      .cls-4 {
+        fill: url(#pattern-3);
+      }
+
+      .cls-5 {
+        fill: #fff;
+        font-size: 25px;
+        font-family: NeoDunggeunmo-Regular, NeoDunggeunmo;
+      }
+    </style>
     <pattern id="pattern" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 98.459, 0)" viewBox="0 0 49.23 49.23">
       <use preserveAspectRatio="none" xlink:href="#image"/>
     </pattern>
@@ -12,21 +35,21 @@
     </pattern>
     <image id="image-2" preserveAspectRatio="none" width="49.23" height="49.23" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABHNCSVQICAgIfAhkiAAAAQ5JREFUaEPtmkkShCAQBMX/f23e5MTEXFwIsAIUCtKrjXZXFpsSPuu6PHxthc8Phe0PzQMF15Tz/ywIi5p2Z+lSgmL9l3BJkBp9mIJLkYntIZwS7I6lW1tWBL4kiVNwRE4Iqx57OX46S5/1PQgwYh+m4L0CEK6wu3l5jNJeFyPsNg1JFVMwlpYM038wlsbS/btUyvBn6aGnocs6k4Ilg/gFY2k/ZlrGENb08ouGsB8zLWMIa3r5RUPYj5mWMYQ1vfyipyR8xjT0/phvWnzT8huXkhljaSyNpb0V4Id4hJ/7QoRDLblOOR1ht7V28cE0Cs71gcb3IbwHcGcezgFrPahxIj5FCMI5/3a4EpMs/QWgT20Z3vsLSQAAAABJRU5ErkJggg=="/>
   </defs>
-  <g id="그룹_23" data-name="그룹 23" transform="translate(-217 -487.803)">
-    <g id="그룹_14" data-name="그룹 14" transform="translate(57 -188)" opacity="0.35">
+  <g id="그룹_115" data-name="그룹 115" transform="translate(241 -1377.803)">
+    <g id="그룹_14" data-name="그룹 14" class="cls-1" transform="translate(-401 702)">
       <use id="d78ab3f552bcd84c683a6252a05ad78a" transform="translate(169 686.803)" xlink:href="#image"/>
-      <rect id="d78ab3f552bcd84c683a6252a05ad78a-2" data-name="d78ab3f552bcd84c683a6252a05ad78a" width="49.23" height="49.23" transform="translate(169 686.803)" fill="url(#pattern)"/>
+      <rect id="d78ab3f552bcd84c683a6252a05ad78a-2" data-name="d78ab3f552bcd84c683a6252a05ad78a" class="cls-2" width="49.23" height="49.23" transform="translate(169 686.803)"/>
     </g>
-    <g id="그룹_3" data-name="그룹 3" transform="translate(217 487.803)">
+    <g id="그룹_3" data-name="그룹 3" transform="translate(-241 1377.803)">
       <g id="그룹_1" data-name="그룹 1">
         <use id="d78ab3f552bcd84c683a6252a05ad78a-3" data-name="d78ab3f552bcd84c683a6252a05ad78a" transform="translate(0 8.205)" xlink:href="#image-2"/>
         <use id="d78ab3f552bcd84c683a6252a05ad78a-4" data-name="d78ab3f552bcd84c683a6252a05ad78a" xlink:href="#image"/>
       </g>
       <g id="그룹_2" data-name="그룹 2" transform="translate(4.923)">
-        <rect id="d78ab3f552bcd84c683a6252a05ad78a-5" data-name="d78ab3f552bcd84c683a6252a05ad78a" width="49.23" height="49.23" transform="translate(0 8.205)" fill="url(#pattern-2)"/>
-        <rect id="d78ab3f552bcd84c683a6252a05ad78a-6" data-name="d78ab3f552bcd84c683a6252a05ad78a" width="49.23" height="49.23" fill="url(#pattern-3)"/>
+        <rect id="d78ab3f552bcd84c683a6252a05ad78a-5" data-name="d78ab3f552bcd84c683a6252a05ad78a" class="cls-3" width="49.23" height="49.23" transform="translate(0 8.205)"/>
+        <rect id="d78ab3f552bcd84c683a6252a05ad78a-6" data-name="d78ab3f552bcd84c683a6252a05ad78a" class="cls-4" width="49.23" height="49.23"/>
       </g>
     </g>
-    <text id="_3" data-name="3" transform="translate(238.333 518.289)" fill="#fff" font-size="25" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="0" y="0">3</tspan></text>
+    <text id="_3" data-name="3" class="cls-5" transform="translate(-219.667 1408.29)"><tspan x="0" y="0">3</tspan></text>
   </g>
 </svg>

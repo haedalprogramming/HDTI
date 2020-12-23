@@ -18,11 +18,11 @@
             <span class="haedal-talk__bubble"></span>
         </div>
         <div class="btns">
-            <button class="answer-btn answer-btn1"><img id="btn1" src="../static/img/btn1.svg" alt="버튼"></button>
-            <button class="answer-btn answer-btn2"><img id="btn2" src="../static/img/btn2.svg" alt="버튼"></button>
-            <button class="answer-btn answer-btn3"><img id="btn3" src="../static/img/btn3.svg" alt="버튼"></button>
-            <button class="answer-btn answer-btn4"><img id="btn4" src="../static/img/btn4.svg" alt="버튼"></button>
-            <button class="answer-btn haedal-btn"><img id="haedalCharacter" src="../static/img/btn_haedal.svg" alt="버튼"></button>
+            <img id="q1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
+            <img id="q2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼">
+            <img id="q3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼">
+            <img id="q4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
+            <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
         </div>
     </div>
 
@@ -42,6 +42,7 @@
         let indice = 0;
         let indices_idx = 0;
         let clickCnt = 0;
+        let answers = [];
 
         const haedalTalks = ['누르면 아파!', '해달이는 귀여워', '오늘 점심은 마라탕 어떠세요'];
         const questions = ['일정표를 만들어 잘 지킨다', '코딩 농담에 웃는 사람들이 이해가 안간다.', '일단 코드를 짜보고 막히면 다시 생각한다.'];
@@ -79,6 +80,9 @@
             } else {
                 //해달이 말풍선 없애기
                 haedalTalk.style.display = 'none';
+
+                answers.push(e.target.id);
+                console.log(answers);
                 
                 clickCnt += 1;
                 for(let i=0; i<faces.length; i++){

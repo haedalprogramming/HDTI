@@ -48,6 +48,7 @@ body {
   color: rgba(255, 255, 255, 0.33);
   text-align: center;
   word-break: keep-all;
+  line-height: 1.8;
   transition: 1s;
   background: rgba(255, 255, 255, 0.3);
 }
@@ -69,6 +70,9 @@ body {
 
 .haedal-talk p {
   font-size: 14px;
+  text-align: center;
+  word-break: keep-all;
+  line-height: 1.5;
 }
 
 .haedal-talk__bubble {
@@ -93,7 +97,7 @@ button:focus {
   top: 439px;
 }
 
-.answer-btn {
+/* .answer-btn {
   border: none;
   background: none;
   cursor: pointer;
@@ -101,42 +105,48 @@ button:focus {
 
 .answer-btn img{
    width: 60px;
-}
+} */
 
 .answer-btn1{
   position: absolute;
   top: 7px;
   left: 29px;
-  /* width: 60px; */
+  width: 60px;
+  cursor: pointer;
 }
 
 .answer-btn2 {
   position: absolute;
   top: 50px;
   left: 95px;
-  /* width: 60px; */
+  width: 60px;
+  cursor: pointer;
 }
 
 .answer-btn3 {
   position: absolute;
   top: 50px;
   left: 216px;
-  /* width: 60px; */
+  width: 60px;
+  cursor: pointer;
 }
 
 .answer-btn4 {
   position: absolute;
   top: 7px;
   left: 273px;
-  /* width: 60px; */
+  width: 60px;
+  cursor: pointer;
 }
 
 .haedal-btn {
   position: absolute;
   top: 7px;
   left: 149px;
+  width: 72px;
+  cursor: pointer;
 }
 
-.haedal-btn img{
+/* .haedal-btn img{
   width: 72px;
-}
+} */
