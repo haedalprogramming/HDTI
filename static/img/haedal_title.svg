@@ -1,32 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="205.887" viewBox="0 0 200 205.887">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="50.312" viewBox="0 0 200 50.312">
   <defs>
-    <style>
-      .cls-1 {
-        fill: #4140fd;
-      }
-
-      .cls-2 {
-        fill: url(#pattern);
-      }
-
-      .cls-3 {
-        fill: url(#pattern-2);
-      }
-
-      .cls-4 {
-        fill: red;
-        letter-spacing: 0.189em;
-      }
-
-      .cls-4, .cls-5 {
-        font-size: 15px;
-        font-family: NeoDunggeunmo-Regular, NeoDunggeunmo;
-      }
-
-      .cls-5 {
-        fill: #fff;
-      }
-    </style>
     <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 138 44">
       <image width="138" height="44" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAAAsCAYAAAC6wiCXAAAABHNCSVQICAgIfAhkiAAAAlZJREFUeF7tnFFSw0AMQ9ML8MVluP8Hl+GLC5RJh0CbJkj2qgNMXn/r2F5Jq/WmMz2dz+eJDwgoBE4IRUHE9zMCN0J5eX6q2stJwPjb+UZZVutb56+ud7S/9fOq31J/r2/vX/kQys9UKeARiil1BWRJwbPDhR3KXMZumOoHoZgIKyARiglkKCzKB0dPn5UoEf022g5Y2rgIpc8QQpmx49YjFYRQEIoUyeV1wh8btrke7xDinrGK0NRtpVpnqfuodSi1u3UveY4wo1QJLAF4xUa1DkIZdIDlcQW8S6jKs7fz3Pxuv6N1uusYrYujhGeMLpGuILv5EYo6hD+/7wLsEoijmES4QKWBd/MhlG0iXfw4ejh6fCvg1rOPVWnHGe9VRmeFrjOO1o07ii9PL1IB4xKp8kSARCgeqY+IUgQjlDHUXfxwFGYUX2nJGcWv6kXiKLc4KTw8VL+jcJQVYl2AS0Ayo1R1motXBLtEqjwMswZnHD1cjw2ZZH89tgoWgpQT4CgFMDdCXfy49XDr8ZXG0cPRY6klKZTUUbE0nsqn8jDMGlJBKDiKIZPsMKt2bml4Mt5LuPlUXziKIRUcBUcxZIKjbIHkOtX62Uc7Vzd/xDFxlHsYEcqGtI4gFMtaG0GpHe4KM1VvWapbN/7CTS2k1FhwmG1owHpErddKMk2Ti0uqHkJxmQnFpYhDKCtCXEDSL9xCurhLg1BmSPg3g019pcRxndzdQOnabl1mlIbVpMmaW3AJS9d26yIUhOIjwPXYx2qOTO/q/+8oNfyIPhIC/HP1kdgeWOsHA3DRuCkcoZQAAAAASUVORK5CYII="/>
     </pattern>
@@ -34,14 +7,9 @@
       <image width="138" height="44" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAAAsCAYAAAC6wiCXAAAABHNCSVQICAgIfAhkiAAAAlJJREFUeF7tnO1Wg0AMROE9+3i+J57SDwsUM5PNerBc/6lLsp25mwSqHadpGvhCgUiBEVAiifj9VYElKJfRKy9f07iQ8bL8dhgGL94wbAKsbHLjtboc7Wcd/6/3t84f7dfb34u/gPI7SpHwgCIdRSoKoADKrAAV5Q4CrUc6Ec9FETjeDODlVlbX7o8ZRdH87ZpaI9Lb2L2wdn+Aknao1oj0NgDlXEYAylMBt2dXgRLFqbpbcfM88qq6ZOPvIajmvV1/gtbjCuwJ+GODmwdQZgWO82S2t4EPw3vnycanoohtPSuwW1l658nGPzgo6+257x3FD7hUI7MCq/GpKOKJ3Qw7b68DlNaTnQW+NW/nYZaKop4ztXIByo6ikTC9BVbj03rUI9FpHaAshY30cG3wDkLZcxR3m/H6SBj1hUZxanp4PHy35sm+jta8xTNKbLy7IhIGUFxFl+tV/QAl0NkTkorShm3D1VQUZhQJH0ABFEB5UUBtcdHBkURN5GVGYUYx2OL2eFcs9aTzwM3grcfSqNSqRkZxap4zcNcjMrD+v571Zbwp2ApkFvjWvMUzCqBkjexdGQ8OCn/hJpZi+X+ysyACiuhEVmD1pDPMikZsetj8g/9bUVxAAAVQLAV6V65sfFqPZWP94irj1ApWle+hhJq3813PcVpPPSK3iFXGqYZV5QOUXkTsxK0yDlBWAquCqMOhG6+aI0C537V4Rnz+Jy5VtptXaFWdq8Ck9VSXjDfxqs26pgCUD2w9gMLHh0r1CFA2oEi6seiMCvDJ1Wd0PfGavwE+w+W4alrv3AAAAABJRU5ErkJggg=="/>
     </pattern>
   </defs>
-  <g id="그룹_77" data-name="그룹 77" transform="translate(-80 -136.113)">
-    <g id="그룹_63" data-name="그룹 63" transform="translate(-30 29.453)">
-      <rect id="사각형_119" data-name="사각형 119" class="cls-1" width="200" height="37" transform="translate(110 112.547)"/>
-      <rect id="_7a9eda24e520be8bf8cc4465400a8130" data-name="7a9eda24e520be8bf8cc4465400a8130" class="cls-2" width="158.069" height="50.312" transform="translate(134.112 106.66)"/>
-      <rect id="_7a9eda24e520be8bf8cc4465400a8130-2" data-name="7a9eda24e520be8bf8cc4465400a8130" class="cls-3" width="158.069" height="50.312" transform="translate(129.826 106.66)"/>
-    </g>
-    <text id="HAEDAL" class="cls-4" transform="translate(151 295)"><tspan x="0" y="0">HAEDAL</tspan></text>
-    <text id="_2020._HAEDAL_all_rights_reserved." data-name=" ⓒ 2020. HAEDAL
-all rights reserved." class="cls-5" transform="translate(180 320)"><tspan x="-60" y="0" xml:space="preserve"> ⓒ 2020. HAEDAL</tspan><tspan x="-75" y="18">all rights reserved.</tspan></text>
+  <g id="그룹_63" data-name="그룹 63" transform="translate(-110 -106.66)">
+    <rect id="사각형_119" data-name="사각형 119" width="200" height="37" transform="translate(110 112.547)" fill="#4140fd"/>
+    <rect id="_7a9eda24e520be8bf8cc4465400a8130" data-name="7a9eda24e520be8bf8cc4465400a8130" width="158.069" height="50.312" transform="translate(134.112 106.66)" fill="url(#pattern)"/>
+    <rect id="_7a9eda24e520be8bf8cc4465400a8130-2" data-name="7a9eda24e520be8bf8cc4465400a8130" width="158.069" height="50.312" transform="translate(129.826 106.66)" fill="url(#pattern-2)"/>
   </g>
 </svg>

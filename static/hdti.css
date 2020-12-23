@@ -1,5 +1,10 @@
 * { box-sizing: border-box; }
 
+@font-face { 
+  font-family: 'NEODGM'; 
+  src: url('../static/NEODGM.ttf') format('truetype'); 
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -7,6 +12,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  font-family: 'NEODGM';
 }
 
 .scene {

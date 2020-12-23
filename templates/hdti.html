@@ -18,11 +18,11 @@
             <span class="haedal-talk__bubble"></span>
         </div>
         <div class="btns">
-            <button class="answer-btn answer-btn1"><img id="btn1" src="../static/img/버튼_1.svg" alt="버튼"></button>
-            <button class="answer-btn answer-btn2"><img id="btn2" src="../static/img/버튼_2.svg" alt="버튼"></button>
-            <button class="answer-btn answer-btn3"><img id="btn3" src="../static/img/버튼_3.svg" alt="버튼"></button>
-            <button class="answer-btn answer-btn4"><img id="btn4" src="../static/img/버튼_4.svg" alt="버튼"></button>
-            <button class="answer-btn haedal-btn"><img id="haedalCharacter" src="../static/img/버튼_haedal.png" alt="버튼"></button>
+            <button class="answer-btn answer-btn1"><img id="btn1" src="../static/img/btn1.svg" alt="버튼"></button>
+            <button class="answer-btn answer-btn2"><img id="btn2" src="../static/img/btn2.svg" alt="버튼"></button>
+            <button class="answer-btn answer-btn3"><img id="btn3" src="../static/img/btn3.svg" alt="버튼"></button>
+            <button class="answer-btn answer-btn4"><img id="btn4" src="../static/img/btn4.svg" alt="버튼"></button>
+            <button class="answer-btn haedal-btn"><img id="haedalCharacter" src="../static/img/btn_haedal.svg" alt="버튼"></button>
         </div>
     </div>
 
@@ -30,7 +30,7 @@
         const cube = document.querySelector('.cube');
         for (let i=0; i<10; i++) {
             const face = document.createElement('div');
-            face.innerText = i + '코딩을 하다가 현타가 와서 "왜 이러고 살지" 생각한 적 있다.'; 
+            face.innerText = '코딩을 하다가 현타가 와서 "왜 이러고 살지" 생각한 적 있다.'; 
             face.classList.add('cube__face');
             cube.appendChild(face)
         }
