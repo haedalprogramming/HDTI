@@ -50,6 +50,38 @@ body {
   backface-visibility: hidden;
 }
 
+.haedal-talk {
+  position: absolute;
+  top: 324px;
+  left: 110px;
+  width: 160px;
+  height: 100px;
+  border-radius: 4px;
+  background: #ffffff;
+  display: none;
+}
+
+.haedal-talk p {
+  font-size: 14px;
+}
+
+.haedal-talk__bubble {
+  position: absolute;
+  bottom: -20px;
+  left: 71px;
+  width: 0px;
+  height: 0px;
+  border-top:15px solid none;
+  border-bottom:20px solid #fff;
+  border-right: 8px solid transparent;
+  border-left: 8px solid  transparent;
+  transform: rotate(180deg);
+}
+
+button:focus {
+  outline: none;
+}
+
 .btns {
   position: absolute;
   top: 439px;
