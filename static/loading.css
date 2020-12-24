@@ -29,6 +29,13 @@ body {
     width: 200px;
 }
 
+.hdti-title__info {
+    position: absolute;
+    top: 99.7px;
+    left: 110px;
+    width: 140px;
+}
+
 .hdti-click {
     position: absolute;
     top: 230px;
@@ -60,20 +67,22 @@ body {
 
 .info-comment {
     position: absolute;
-    top: 176px;
-    left: 60px;
+    top: 185px;
+    left: 70px;
     color: #fff;
     text-align: center;
 }
 
 .info-comment p {
     margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 .info-time {
     position: absolute;
-    top: 350px;
-    left: 81px;
+    top: 340px;
+    left: 77px;
     color: #fff;
     font-size: 13px;
     text-align: center;

@@ -25,7 +25,9 @@
         const clickComment = document.querySelector('.hdti-etc');
 
         joyStick.addEventListener('click', function () {
+            const hdtiTitle = document.querySelector('.hdti-title');
             const infoComment = document.createElement('div');
+
             infoComment.innerHTML = `<div class="info-comment"><P>안녕하세요 개발자님.</P>
                                     <P>HDTI 유형 검사를 시작하겠습니다.</P>
                                     <P>문항을 잘 읽고</P>
@@ -37,8 +39,14 @@
             joyStick.src = '../static/img/조이스틱_눕힌거.svg'
 
             setTimeout(function() {
+                hdtiTitle.classList.remove('hdti-title');
+                hdtiTitle.classList.add('hdti-title__info');
                 clickComment.innerHTML = infoComment.innerHTML;
             }, 700);
+
+            setTimeout(function() {
+                joyStick.src = '../static/img/조이스틱.svg'
+            }, 800)
 
         })
     </script>
