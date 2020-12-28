@@ -17,37 +17,48 @@
             <img class="hdti-rights" src="../static/img/haedal_rights.svg" alt="title">
         </div>
         
-        <img class="hdti-joystick" src="../static/img/조이스틱.svg" alt="조이스틱">
+        <a id="joystickLink" href="#"><img class="hdti-joystick" src="../static/img/조이스틱.svg" alt="조이스틱"></a>
     </div>
     
     <script>
         const joyStick = document.querySelector('.hdti-joystick');
+        const joystickLink = document.querySelector('#joystickLink');
         const clickComment = document.querySelector('.hdti-etc');
+        let clickJoystickCnt = 0;
 
-        joyStick.addEventListener('click', function () {
-            const hdtiTitle = document.querySelector('.hdti-title');
-            const infoComment = document.createElement('div');
+        joyStick.addEventListener('click', function (e) {
+            clickJoystickCnt += 1;
+            if (clickJoystickCnt == 1) {
+                // 새로고침 방지
+                e.preventDefault();
 
-            infoComment.innerHTML = `<div class="info-comment"><P>안녕하세요 개발자님.</P>
-                                    <P>HDTI 유형 검사를 시작하겠습니다.</P>
-                                    <P>문항을 잘 읽고</P>
-                                    <P>질문에 따른 본인의 성향을</P>
-                                    <P>선택하여 주세요.</P>
-                                    <P>지나친 생각은 정확한</P>
-                                    <P>검사 결과를 해칠 수 있습니다 ...</P></div>
-                                    <p class="info-time">해당 검사는 12분 정도 소요됩니다.</p>`
-            joyStick.src = '../static/img/조이스틱_눕힌거.svg'
+                const hdtiTitle = document.querySelector('.hdti-title');
+                const infoComment = document.createElement('div');
 
-            setTimeout(function() {
-                hdtiTitle.classList.remove('hdti-title');
-                hdtiTitle.classList.add('hdti-title__info');
-                clickComment.innerHTML = infoComment.innerHTML;
-            }, 700);
+                infoComment.innerHTML = `<div class="info-comment"><P>안녕하세요 개발자님.</P>
+                                        <P>HDTI 유형 검사를 시작하겠습니다.</P>
+                                        <P>문항을 잘 읽고</P>
+                                        <P>질문에 따른 본인의 성향을</P>
+                                        <P>선택하여 주세요.</P>
+                                        <P>지나친 생각은 정확한</P>
+                                        <P>검사 결과를 해칠 수 있습니다 ...</P></div>
+                                        <p class="info-time">해당 검사는 12분 정도 소요됩니다.</p>`
+                joyStick.src = '../static/img/조이스틱_눕힌거.svg';
+                
 
-            setTimeout(function() {
-                joyStick.src = '../static/img/조이스틱.svg'
-            }, 800)
+                setTimeout(function() {
+                    hdtiTitle.classList.remove('hdti-title');
+                    hdtiTitle.classList.add('hdti-title__info');
+                    clickComment.innerHTML = infoComment.innerHTML;
+                }, 700);
 
+                setTimeout(function() {
+                    joyStick.src = '../static/img/조이스틱.svg';
+                    joystickLink.setAttribute('href', './hdti.html');
+                }, 800)
+            } else {
+                joyStick.src = '../static/img/조이스틱_눕힌거.svg';
+            }
         })
     </script>
 </body>
