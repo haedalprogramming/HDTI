@@ -1,8 +1,10 @@
-* { box-sizing: border-box; }
-
 @font-face { 
   font-family: 'NEODGM'; 
   src: url('../static/NEODGM.ttf') format('truetype'); 
+}
+
+* { 
+  box-sizing: border-box; 
 }
 
 body {
@@ -12,17 +14,18 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  box-sizing: border-box;
   font-family: 'NEODGM';
 }
 
-.scene {
-  background: url('../static/img/HDTI2.svg') center no-repeat;
-  background-size: contain;
+.hdti-bg {
   width: 370px;
   height: 650px;
   position: relative;
+  background: url('../static/img/HDTI2.svg') center no-repeat;
+  background-size: contain;
 }
-
+/* 여기부터 */
 .cube-wrap {
   position: relative;
   width:80%;

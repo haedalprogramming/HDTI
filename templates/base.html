@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}해달 MBTI{% endblock %}</title>
     <link rel="stylesheet" href="../static/base.css">
-    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="../static/loading.css">
 </head>
 <body>
-{% block content %}
-{% endblock %}
-
+    <div class="hdti-bg">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
-</html>
+</html> 
