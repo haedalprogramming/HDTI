@@ -22,7 +22,7 @@ body {
   width: 370px;
   height: 650px;
   position: relative;
-  background: url('../static/img/HDTI2.svg') center no-repeat;
+  background: url('../img/HDTI2.svg') center no-repeat;
   background-size: contain;
 }
 /* 여기부터 */
