@@ -26,6 +26,18 @@ body {
   background-size: contain;
 }
 /* 여기부터 */
+.tutorial {
+  position: absolute;
+  width: 80%;
+  height: 336px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(12%) translateY(-86%);
+}
+
+.text-blur {
+  filter: blur(3px);
+}
+
 .cube-wrap {
   position: relative;
   width:80%;

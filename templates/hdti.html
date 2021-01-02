@@ -67,68 +67,88 @@
             faces[8].style.background = 'rgba(255, 255, 255, 0.17)';
             faces[2].style.background = 'rgba(255, 255, 255, 0.17)';
         }
-        
-        btns.addEventListener('click', function(e) {
-            if (e.target.id == 'haedalCharacter') {
-                let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
-                haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
-                
-                haedalTalk.style.display = 'flex';
-                haedalTalk.style.justifyContent = 'center';
-                haedalTalk.style.alignItems = 'center';
-            } else {
-                //해달이 말풍선 없애기
-                haedalTalk.style.display = 'none';
 
-                answers.push(e.target.id);
-                console.log(answers);
-                
-                clickCnt += 1;
-                for(let i=0; i<faces.length; i++){
-                    indices[i] += 36;
-                    // indices[i] = indices[i] + 60 + 360 * 3;
-                    faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
-                } 
+        const hdtiBg = document.querySelector('.hdti-bg');
+        const tutorial = document.createElement('div');
+        tutorial.classList.add('tutorial');
+        faces[0].classList.add('text-blur');
+        faces[1].classList.add('text-blur');
+        faces[2].classList.add('text-blur');
+        faces[8].classList.add('text-blur');
+        faces[9].classList.add('text-blur');
+        hdtiBg.appendChild(tutorial);
 
-                // next indices_idx값
-                indices_idx = indices_idx-1 < 0 ? 9 : indices_idx-1
+        setTimeout(() => {
+            // 블러 없애기
+            tutorial.classList.remove('tutorial');
+            faces[0].classList.remove('text-blur');
+            faces[1].classList.remove('text-blur');
+            faces[2].classList.remove('text-blur');
+            faces[8].classList.remove('text-blur');
+            faces[9].classList.remove('text-blur');
+            // 버튼 이벤트리스너
+            btns.addEventListener('click', function(e) {
+                if (e.target.id == 'haedalCharacter') {
+                    let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
+                    haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
+                    
+                    haedalTalk.style.display = 'flex';
+                    haedalTalk.style.justifyContent = 'center';
+                    haedalTalk.style.alignItems = 'center';
+                } else {
+                    //해달이 말풍선 없애기
+                    haedalTalk.style.display = 'none';
 
-                // 한 칸 넘어갔을 때 styling
-                let first = indices_idx-2 < 0 ? indices_idx-2 + 10 : indices_idx-2;
-                let second = indices_idx-1 < 0 ? indices_idx-1 + 10 : indices_idx-1;
-                let fourth = indices_idx-9 < 0 ? indices_idx-9 + 10 : indices_idx-9;
-                let fifth = indices_idx-8 < 0 ? indices_idx-8 + 10 : indices_idx-8;
+                    answers.push(e.target.id);
+                    console.log(answers);
+                    
+                    clickCnt += 1;
+                    for(let i=0; i<faces.length; i++){
+                        indices[i] += 36;
+                        // indices[i] = indices[i] + 60 + 360 * 3;
+                        faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
+                    } 
 
-                // 1, 5번
-                faces[first].style.background = 'rgba(255, 255, 255, 0.17)';
-                faces[first].style.fontWeight = 'normal';
-                faces[first].style.color = 'rgba(255, 255, 255, 0.33)';
-                
-                faces[fifth].style.background = 'rgba(255, 255, 255, 0.17)';
-                faces[fifth].style.fontWeight = 'normal';
-                faces[fifth].style.color = 'rgba(255, 255, 255, 0.33)';
+                    // next indices_idx값
+                    indices_idx = indices_idx-1 < 0 ? 9 : indices_idx-1
 
-                // 2, 4번
-                faces[second].style.background = 'rgba(255, 255, 255, 0.23)';
-                faces[second].style.fontWeight = 'normal';
-                faces[second].style.color = 'rgba(255, 255, 255, 0.33)';
+                    // 한 칸 넘어갔을 때 styling
+                    let first = indices_idx-2 < 0 ? indices_idx-2 + 10 : indices_idx-2;
+                    let second = indices_idx-1 < 0 ? indices_idx-1 + 10 : indices_idx-1;
+                    let fourth = indices_idx-9 < 0 ? indices_idx-9 + 10 : indices_idx-9;
+                    let fifth = indices_idx-8 < 0 ? indices_idx-8 + 10 : indices_idx-8;
 
-                faces[fourth].style.background = 'rgba(255, 255, 255, 0.23)';
-                faces[fourth].style.fontWeight = 'normal';
-                faces[fourth].style.color = 'rgba(255, 255, 255, 0.33)';
+                    // 1, 5번
+                    faces[first].style.background = 'rgba(255, 255, 255, 0.17)';
+                    faces[first].style.fontWeight = 'normal';
+                    faces[first].style.color = 'rgba(255, 255, 255, 0.33)';
+                    
+                    faces[fifth].style.background = 'rgba(255, 255, 255, 0.17)';
+                    faces[fifth].style.fontWeight = 'normal';
+                    faces[fifth].style.color = 'rgba(255, 255, 255, 0.33)';
 
-                // 3번
-                faces[indices_idx].style.background = 'rgba(255, 255, 255, 0.3)';
-                faces[indices_idx].style.fontWeight = 'bold';
-                faces[indices_idx].style.color = '#fff';
+                    // 2, 4번
+                    faces[second].style.background = 'rgba(255, 255, 255, 0.23)';
+                    faces[second].style.fontWeight = 'normal';
+                    faces[second].style.color = 'rgba(255, 255, 255, 0.33)';
 
-                //한 바퀴 돌고난 후 질문 바꾸기
-                if (clickCnt > 7 && questions.length) {
-                    faces[questions_idx].innerText = questions.shift();
-                    questions_idx = questions_idx-1 < 0 ? 9 : questions_idx-1;
+                    faces[fourth].style.background = 'rgba(255, 255, 255, 0.23)';
+                    faces[fourth].style.fontWeight = 'normal';
+                    faces[fourth].style.color = 'rgba(255, 255, 255, 0.33)';
+
+                    // 3번
+                    faces[indices_idx].style.background = 'rgba(255, 255, 255, 0.3)';
+                    faces[indices_idx].style.fontWeight = 'bold';
+                    faces[indices_idx].style.color = '#fff';
+
+                    //한 바퀴 돌고난 후 질문 바꾸기
+                    if (clickCnt > 7 && questions.length) {
+                        faces[questions_idx].innerText = questions.shift();
+                        questions_idx = questions_idx-1 < 0 ? 9 : questions_idx-1;
+                    }
                 }
-            }
-        });
+            });
+        }, 3000);
     </script>
 </body>
 </html>
