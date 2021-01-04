@@ -19,8 +19,7 @@
         <div class="btns">
             <img id="1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
             <img id="2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼">
-            <img id="3" class="answer-btn3" src="../static
-            /img/btn3.svg" alt="버튼">
+            <img id="3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼">
             <img id="4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
             <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
         </div>
@@ -28,9 +27,10 @@
 
     <script>
         const cube = document.querySelector('.cube');
+        const questionsArray = {{ questions|tojson }};
         for (let i=0; i<10; i++) {
             const face = document.createElement('div');
-            face.innerText = '코딩을 하다가 현타가 와서 "왜 이러고 살지" 생각한 적 있다.'; 
+            face.innerText = questionsArray[i]; 
             face.classList.add('cube__face');
             cube.appendChild(face)
         }
@@ -45,7 +45,8 @@
         let answers = [];
 
         const haedalTalks = ['누르면 아파!', '해달이는 귀여워', '오늘 점심은 마라탕 어떠세요'];
-        const questions = ['일정표를 만들어 잘 지킨다', '코딩 농담에 웃는 사람들이 이해가 안간다.', '일단 코드를 짜보고 막히면 다시 생각한다.'];
+        const questions = questionsArray.slice(10);
+        console.log('questions', questions);
         let questions_idx = 0;
 
         for (let i=0; i<10; i++) {
@@ -162,9 +163,9 @@
                         questions_idx = questions_idx-1 < 0 ? 9 : questions_idx-1;
                     }
                     // 트랙 check
-                    if (clickCnt > 12) {
+                    if (clickCnt > 27) {
                         haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">트랙 검사로 넘어갈까요?</p>
-                                <p class="haedal-talk__track"><span>YES</span> - 1 <span>NO</span> - 4</p>`        
+                                <p class="haedal-talk__track"><span style="color: blue">YES</span> - 1 <span style="color: red">NO</span> - 4</p>`        
                         haedalTalk.style.display = 'flex';
                         haedalTalk.style.flexDirection = 'column';
                         haedalTalk.style.justifyContent = 'center';
