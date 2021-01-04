@@ -5,7 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', questions=loadquestion.questions, tracks=loadquestion.tracks)
+    return render_template('loading.html')
+
+@app.route('/hdti')
+def hdti():
+    return render_template('hdti.html')
 
 @app.route('/result', methods=["POST"])
 def result():
@@ -191,4 +195,4 @@ def types():
     return render_template('types.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run() #host='0.0.0.0', port=80)

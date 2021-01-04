@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}해달 MBTI{% endblock %}</title>
-    <link rel="stylesheet" href="../static/base.css">
-    <link rel="stylesheet" href="../static/loading.css">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/loading.css">
 </head>
 <body>
     <div class="hdti-bg">
         {% block content %}
         {% endblock %}
     </div>
+    <script>
+        {% block script %}
+        {% endblock %}
+    </script>
 </body>
-</html> 
+</html>
