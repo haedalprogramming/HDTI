@@ -68,7 +68,9 @@
             faces[2].style.background = 'rgba(255, 255, 255, 0.17)';
         }
 
+        // 튜토리얼 배경
         const hdtiBg = document.querySelector('.hdti-bg');
+        // const haedalTalkBubble = document.querySelector('.haedal-talk__bubble');
         const tutorial = document.createElement('div');
         tutorial.classList.add('tutorial');
         faces[0].classList.add('text-blur');
@@ -77,6 +79,15 @@
         faces[8].classList.add('text-blur');
         faces[9].classList.add('text-blur');
         hdtiBg.appendChild(tutorial);
+        // 튜토리얼
+        haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">1번: 매우 그렇다.</p>
+                                <p class="haedal-talk__tutorial">2번: 조금 그렇다.</p>
+                                <p class="haedal-talk__tutorial">3번: 조금 아니다.</p>
+                                <p class="haedal-talk__tutorial">4번: 매우 아니다.</p>`        
+        haedalTalk.style.display = 'flex';
+        haedalTalk.style.flexDirection = 'column';
+        haedalTalk.style.justifyContent = 'center';
+        haedalTalk.style.alignItems = 'center';
 
         setTimeout(() => {
             // 블러 없애기
@@ -86,6 +97,8 @@
             faces[2].classList.remove('text-blur');
             faces[8].classList.remove('text-blur');
             faces[9].classList.remove('text-blur');
+            // 튜토리얼 없애기
+            haedalTalk.style.display = 'none';
             // 버튼 이벤트리스너
             btns.addEventListener('click', function(e) {
                 if (e.target.id == 'haedalCharacter') {
