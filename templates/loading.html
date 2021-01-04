@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block title %}해달 MBTI{% endblock %}
 {% block content %}
     <img class="hdti-title" src="../static/img/haedal_title.svg" alt="title">
     <div class="hdti-etc">
@@ -10,7 +11,8 @@
     
     <a id="joystickLink" href="#"><img class="hdti-joystick" src="../static/img/조이스틱.svg" alt="조이스틱"></a>
 {% endblock %}
-<script>
+
+{% block script %}
     const joyStick = document.querySelector('.hdti-joystick');
     const joystickLink = document.querySelector('#joystickLink');
     const clickComment = document.querySelector('.hdti-etc');
@@ -44,10 +46,10 @@
 
             setTimeout(function() {
                 joyStick.src = '../static/img/조이스틱.svg';
-                joystickLink.setAttribute('href', './hdti.html');
+                joystickLink.setAttribute('href', './hdti');
             }, 800)
         } else {
             joyStick.src = '../static/img/조이스틱_눕힌거.svg';
         }
     })
-</script>
+{% endblock %}
