@@ -112,10 +112,11 @@
                     //해달이 말풍선 없애기
                     haedalTalk.style.display = 'none';
 
+                    clickCnt += 1;
+                    
                     answers.push(e.target.id);
                     console.log(answers);
                     
-                    clickCnt += 1;
                     for(let i=0; i<faces.length; i++){
                         indices[i] += 36;
                         // indices[i] = indices[i] + 60 + 360 * 3;
@@ -154,10 +155,20 @@
                     faces[indices_idx].style.fontWeight = 'bold';
                     faces[indices_idx].style.color = '#fff';
 
-                    //한 바퀴 돌고난 후 질문 바꾸기
+                    // 한 바퀴 돌고난 후 질문 바꾸기
                     if (clickCnt > 7 && questions.length) {
                         faces[questions_idx].innerText = questions.shift();
                         questions_idx = questions_idx-1 < 0 ? 9 : questions_idx-1;
+                    }
+                    // 트랙 check
+                    if (clickCnt > 12) {
+                        haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">트랙 검사로 넘어갈까요?</p>
+                                <p class="haedal-talk__track"><span>YES</span> - 1 <span>NO</span> - 4</p>`        
+                        haedalTalk.style.display = 'flex';
+                        haedalTalk.style.flexDirection = 'column';
+                        haedalTalk.style.justifyContent = 'center';
+                        haedalTalk.style.alignItems = 'center';
+                        haedalTalk.style.padding = '10px';
                     }
                 }
             });
