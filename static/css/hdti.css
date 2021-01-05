@@ -132,16 +132,6 @@ button:focus {
   top: 439px;
 }
 
-/* .answer-btn {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.answer-btn img{
-   width: 60px;
-} */
-
 .answer-btn1{
   position: absolute;
   top: 7px;
@@ -181,7 +171,3 @@ button:focus {
   width: 72px;
   cursor: pointer;
 }
-
-/* .haedal-btn img{
-  width: 72px;
-} */

@@ -1,0 +1,44 @@
+.btns {
+    position: absolute;
+    top: 439px;
+  }
+  
+  .answer-btn1{
+    position: absolute;
+    top: 7px;
+    left: 29px;
+    width: 60px;
+    cursor: pointer;
+  }
+  
+  .answer-btn2 {
+    position: absolute;
+    top: 50px;
+    left: 95px;
+    width: 60px;
+    cursor: pointer;
+  }
+  
+  .answer-btn3 {
+    position: absolute;
+    top: 50px;
+    left: 216px;
+    width: 60px;
+    cursor: pointer;
+  }
+  
+  .answer-btn4 {
+    position: absolute;
+    top: 7px;
+    left: 273px;
+    width: 60px;
+    cursor: pointer;
+  }
+  
+  .haedal-btn {
+    position: absolute;
+    top: 7px;
+    left: 149px;
+    width: 72px;
+    cursor: pointer;
+  }

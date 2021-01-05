@@ -1,205 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>해달 MBTI</title>
-    <link rel="stylesheet" href="../static/css/hdti.css">
-</head>
-<body>
-    <div class="hdti-bg">
-        <div class="cube-wrap">
-            <div class="cube is-backface-hidden">
-            </div>
-        </div>
-        <div id="haedalTalk" class="haedal-talk">
-            <span class="haedal-talk__bubble"></span>
-        </div>
-        <div class="btns">
-            <img id="1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
-            <img id="2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼">
-            <img id="3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼">
-            <img id="4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
-            <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="cube-wrap">
+        <div class="cube is-backface-hidden">
         </div>
     </div>
+    <div id="haedalTalk" class="haedal-talk">
+        <span class="haedal-talk__bubble"></span>
+    </div>
+    <div class="btns">
+        <img id="1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
+        <img id="2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼">
+        <img id="3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼">
+        <img id="4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
+        <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
+    </div>
+{% endblock %}
 
-    <script>
-        const cube = document.querySelector('.cube');
-        const questionsArray = {{ questions|tojson }};
-        const tracksArray = {{ tracks|tojson }}; 
+{% block script %}
+    const cube = document.querySelector('.cube');
+    const questionsArray = {{ questions|tojson }};
+    const tracksArray = {{ tracks|tojson }}; 
 
-        for (let i=0; i<10; i++) {
-            const face = document.createElement('div');
-            face.innerText = questionsArray[i]; 
-            face.classList.add('cube__face');
-            cube.appendChild(face)
-        }
+    for (let i=0; i<10; i++) {
+        const face = document.createElement('div');
+        face.innerText = questionsArray[i]; 
+        face.classList.add('cube__face');
+        cube.appendChild(face)
+    }
 
-        const faces = document.querySelectorAll('.cube__face');
-        const haedalTalk = document.querySelector('#haedalTalk');
-        const btns = document.querySelector('.btns');
-        let indices = [];
-        let indice = 0;
-        let indices_idx = 0;
-        let clickCnt = 0;
-        let answers = [];
+    const faces = document.querySelectorAll('.cube__face');
+    const haedalTalk = document.querySelector('#haedalTalk');
+    const btns = document.querySelector('.btns');
+    let indices = [];
+    let indice = 0;
+    let indices_idx = 0;
+    let clickCnt = 0;
+    let answers = [];
 
-        const haedalTalks = ['누르면 아파!', '해달이는 귀여워', '오늘 점심은 마라탕 어떠세요'];
-        const questions = questionsArray.slice(10);
-        console.log('questions', questions);
-        let questions_idx = 0;
+    const haedalTalks = ['누르면 아파!', '해달이는 귀여워', '오늘 점심은 마라탕 어떠세요'];
+    const questions = questionsArray.slice(10);
+    console.log('questions', questions);
+    let questions_idx = 0;
 
-        function setBlur() {
-            const hdtiBg = document.querySelector('.hdti-bg');
-            // const haedalTalkBubble = document.querySelector('.haedal-talk__bubble');
-            const tutorial = document.createElement('div');
-            tutorial.classList.add('tutorial');
-            faces[0].classList.add('text-blur');
-            faces[1].classList.add('text-blur');
-            faces[2].classList.add('text-blur');
-            faces[8].classList.add('text-blur');
-            faces[9].classList.add('text-blur');
-            hdtiBg.appendChild(tutorial);
-        };
+    function setBlur() {
+        const hdtiBg = document.querySelector('.hdti-bg');
+        // const haedalTalkBubble = document.querySelector('.haedal-talk__bubble');
+        const tutorial = document.createElement('div');
+        tutorial.classList.add('tutorial');
+        faces[0].classList.add('text-blur');
+        faces[1].classList.add('text-blur');
+        faces[2].classList.add('text-blur');
+        faces[8].classList.add('text-blur');
+        faces[9].classList.add('text-blur');
+        hdtiBg.appendChild(tutorial);
+    };
 
-        function removeBlur() {
-            const tutorial = document.querySelector('.tutorial');
-            tutorial.classList.remove('tutorial');
-            faces[0].classList.remove('text-blur');
-            faces[1].classList.remove('text-blur');
-            faces[2].classList.remove('text-blur');
-            faces[8].classList.remove('text-blur');
-            faces[9].classList.remove('text-blur');
-        };
+    function removeBlur() {
+        const tutorial = document.querySelector('.tutorial');
+        tutorial.classList.remove('tutorial');
+        faces[0].classList.remove('text-blur');
+        faces[1].classList.remove('text-blur');
+        faces[2].classList.remove('text-blur');
+        faces[8].classList.remove('text-blur');
+        faces[9].classList.remove('text-blur');
+    };
 
-        for (let i=0; i<10; i++) {
-            indices.push(indice);
-            indice += 36;
-        }
+    for (let i=0; i<10; i++) {
+        indices.push(indice);
+        indice += 36;
+    }
 
-        for (let i=0; i<10; i++) {
-            faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
-            //3번
-            faces[0].style.background = 'rgba(255, 255, 255, 0.3)';
-            faces[0].style.fontWeight = 'bold';
-            faces[0].style.color = '#fff';
+    for (let i=0; i<10; i++) {
+        faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
+        //3번
+        faces[0].style.background = 'rgba(255, 255, 255, 0.3)';
+        faces[0].style.fontWeight = 'bold';
+        faces[0].style.color = '#fff';
 
-            //2, 4번
-            faces[9].style.background = 'rgba(255, 255, 255, 0.23)';
-            faces[1].style.background = 'rgba(255, 255, 255, 0.23)';
+        //2, 4번
+        faces[9].style.background = 'rgba(255, 255, 255, 0.23)';
+        faces[1].style.background = 'rgba(255, 255, 255, 0.23)';
 
-            //1, 5번
-            faces[8].style.background = 'rgba(255, 255, 255, 0.17)';
-            faces[2].style.background = 'rgba(255, 255, 255, 0.17)';
-        }
+        //1, 5번
+        faces[8].style.background = 'rgba(255, 255, 255, 0.17)';
+        faces[2].style.background = 'rgba(255, 255, 255, 0.17)';
+    }
 
-        // 튜토리얼 배경
-        setBlur();
+    // 튜토리얼 배경
+    setBlur();
 
-        // 튜토리얼
-        haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">1번: 매우 그렇다.</p>
-                                <p class="haedal-talk__tutorial">2번: 조금 그렇다.</p>
-                                <p class="haedal-talk__tutorial">3번: 조금 아니다.</p>
-                                <p class="haedal-talk__tutorial">4번: 매우 아니다.</p>`        
-        haedalTalk.style.display = 'flex';
-        haedalTalk.style.flexDirection = 'column';
-        haedalTalk.style.justifyContent = 'center';
-        haedalTalk.style.alignItems = 'center';
+    // 튜토리얼
+    haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">1번: 매우 그렇다.</p>
+                            <p class="haedal-talk__tutorial">2번: 조금 그렇다.</p>
+                            <p class="haedal-talk__tutorial">3번: 조금 아니다.</p>
+                            <p class="haedal-talk__tutorial">4번: 매우 아니다.</p>`        
+    haedalTalk.style.display = 'flex';
+    haedalTalk.style.flexDirection = 'column';
+    haedalTalk.style.justifyContent = 'center';
+    haedalTalk.style.alignItems = 'center';
 
-        setTimeout(() => {
-            // 블러 없애기
-            removeBlur();
-            // 튜토리얼 없애기
-            haedalTalk.style.display = 'none';
-            // 버튼 이벤트리스너
-            btns.addEventListener('click', function(e) {
-                if (e.target.id == 'haedalCharacter') {
-                    let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
-                    haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
-                    
+    setTimeout(() => {
+        // 블러 없애기
+        removeBlur();
+        // 튜토리얼 없애기
+        haedalTalk.style.display = 'none';
+        // 버튼 이벤트리스너
+        btns.addEventListener('click', function(e) {
+            if (e.target.id == 'haedalCharacter') {
+                let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
+                haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
+                
+                haedalTalk.style.display = 'flex';
+                haedalTalk.style.justifyContent = 'center';
+                haedalTalk.style.alignItems = 'center';
+            } else {
+                //해달이 말풍선 없애기
+                haedalTalk.style.display = 'none';
+
+                clickCnt += 1;
+
+                // 트랙 check
+                if (clickCnt > 28) {
+                    haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">트랙 검사로 넘어갈까요?</p>
+                            <p class="haedal-talk__track"><span style="color: blue">YES</span> - 1 <span style="color: red">NO</span> - 4</p>`        
                     haedalTalk.style.display = 'flex';
+                    haedalTalk.style.flexDirection = 'column';
                     haedalTalk.style.justifyContent = 'center';
                     haedalTalk.style.alignItems = 'center';
+                    haedalTalk.style.padding = '10px';
+
+                    if(e.target.id == '1') {
+                        console.log(tracksArray);
+                        // 트랙배열 받아서 보여주기
+                        for (let i=0; i<10; i++) {
+                            faces[i].innerText = tracksArray[i]; 
+                        }
+                    } else if (e.target.id == '4') {
+                        console.log('444');
+                        // 주원씨가 해줄거임
+                        // answers
+                    }
                 } else {
-                    //해달이 말풍선 없애기
-                    haedalTalk.style.display = 'none';
+                    answers.push(e.target.id);
+                    console.log(answers);
+                    
+                    for(let i=0; i<faces.length; i++){
+                        indices[i] += 36;
+                        // indices[i] = indices[i] + 60 + 360 * 3;
+                        faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
+                    } 
 
-                    clickCnt += 1;
+                    // next indices_idx값
+                    indices_idx = indices_idx-1 < 0 ? 9 : indices_idx-1
 
-                    // 트랙 check
-                    if (clickCnt > 28) {
-                        haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">트랙 검사로 넘어갈까요?</p>
-                                <p class="haedal-talk__track"><span style="color: blue">YES</span> - 1 <span style="color: red">NO</span> - 4</p>`        
-                        haedalTalk.style.display = 'flex';
-                        haedalTalk.style.flexDirection = 'column';
-                        haedalTalk.style.justifyContent = 'center';
-                        haedalTalk.style.alignItems = 'center';
-                        haedalTalk.style.padding = '10px';
+                    // 한 칸 넘어갔을 때 styling
+                    let first = indices_idx-2 < 0 ? indices_idx-2 + 10 : indices_idx-2;
+                    let second = indices_idx-1 < 0 ? indices_idx-1 + 10 : indices_idx-1;
+                    let fourth = indices_idx-9 < 0 ? indices_idx-9 + 10 : indices_idx-9;
+                    let fifth = indices_idx-8 < 0 ? indices_idx-8 + 10 : indices_idx-8;
 
-                        if(e.target.id == '1') {
-                            console.log(tracksArray);
-                            // 트랙배열 받아서 보여주기
-                            for (let i=0; i<10; i++) {
-                                faces[i].innerText = tracksArray[i]; 
-                            }
-                        } else if (e.target.id == '4') {
-                            console.log('444');
-                            // 주원씨가 해줄거임
-                            // answers
-                        }
-                    } else {
-                        answers.push(e.target.id);
-                        console.log(answers);
-                        
-                        for(let i=0; i<faces.length; i++){
-                            indices[i] += 36;
-                            // indices[i] = indices[i] + 60 + 360 * 3;
-                            faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
-                        } 
+                    // 1, 5번
+                    faces[first].style.background = 'rgba(255, 255, 255, 0.17)';
+                    faces[first].style.fontWeight = 'normal';
+                    faces[first].style.color = 'rgba(255, 255, 255, 0.33)';
+                    
+                    faces[fifth].style.background = 'rgba(255, 255, 255, 0.17)';
+                    faces[fifth].style.fontWeight = 'normal';
+                    faces[fifth].style.color = 'rgba(255, 255, 255, 0.33)';
 
-                        // next indices_idx값
-                        indices_idx = indices_idx-1 < 0 ? 9 : indices_idx-1
+                    // 2, 4번
+                    faces[second].style.background = 'rgba(255, 255, 255, 0.23)';
+                    faces[second].style.fontWeight = 'normal';
+                    faces[second].style.color = 'rgba(255, 255, 255, 0.33)';
 
-                        // 한 칸 넘어갔을 때 styling
-                        let first = indices_idx-2 < 0 ? indices_idx-2 + 10 : indices_idx-2;
-                        let second = indices_idx-1 < 0 ? indices_idx-1 + 10 : indices_idx-1;
-                        let fourth = indices_idx-9 < 0 ? indices_idx-9 + 10 : indices_idx-9;
-                        let fifth = indices_idx-8 < 0 ? indices_idx-8 + 10 : indices_idx-8;
+                    faces[fourth].style.background = 'rgba(255, 255, 255, 0.23)';
+                    faces[fourth].style.fontWeight = 'normal';
+                    faces[fourth].style.color = 'rgba(255, 255, 255, 0.33)';
 
-                        // 1, 5번
-                        faces[first].style.background = 'rgba(255, 255, 255, 0.17)';
-                        faces[first].style.fontWeight = 'normal';
-                        faces[first].style.color = 'rgba(255, 255, 255, 0.33)';
-                        
-                        faces[fifth].style.background = 'rgba(255, 255, 255, 0.17)';
-                        faces[fifth].style.fontWeight = 'normal';
-                        faces[fifth].style.color = 'rgba(255, 255, 255, 0.33)';
+                    // 3번
+                    faces[indices_idx].style.background = 'rgba(255, 255, 255, 0.3)';
+                    faces[indices_idx].style.fontWeight = 'bold';
+                    faces[indices_idx].style.color = '#fff';
 
-                        // 2, 4번
-                        faces[second].style.background = 'rgba(255, 255, 255, 0.23)';
-                        faces[second].style.fontWeight = 'normal';
-                        faces[second].style.color = 'rgba(255, 255, 255, 0.33)';
-
-                        faces[fourth].style.background = 'rgba(255, 255, 255, 0.23)';
-                        faces[fourth].style.fontWeight = 'normal';
-                        faces[fourth].style.color = 'rgba(255, 255, 255, 0.33)';
-
-                        // 3번
-                        faces[indices_idx].style.background = 'rgba(255, 255, 255, 0.3)';
-                        faces[indices_idx].style.fontWeight = 'bold';
-                        faces[indices_idx].style.color = '#fff';
-
-                        // 한 바퀴 돌고난 후 질문 바꾸기
-                        if (clickCnt > 7 && questions.length) {
-                            faces[questions_idx].innerText = questions.shift();
-                            questions_idx = questions_idx-1 < 0 ? 9 : questions_idx-1;
-                        }
+                    // 한 바퀴 돌고난 후 질문 바꾸기
+                    if (clickCnt > 7 && questions.length) {
+                        faces[questions_idx].innerText = questions.shift();
+                        questions_idx = questions_idx-1 < 0 ? 9 : questions_idx-1;
                     }
                 }
-            });
-        }, 3000);
-    </script>
+            }
+        });
+    }, 3000);
+{% endblock %}
 </body>
 </html>

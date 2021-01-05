@@ -11,6 +11,10 @@ def index():
 def hdti():
     return render_template('hdti.html', questions=loadquestion.questions, tracks=loadquestion.tracks)
 
+@app.route('/test')
+def result2():
+    return render_template('result2.html')
+
 @app.route('/result', methods=["POST"])
 def result():
     score_A = score_T = score_R = score_F = score_E = score_C = score_P = score_I = score_gae = score_gi = 0
