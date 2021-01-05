@@ -51,6 +51,29 @@
         console.log('questions', questions);
         let questions_idx = 0;
 
+        function setBlur() {
+            const hdtiBg = document.querySelector('.hdti-bg');
+            // const haedalTalkBubble = document.querySelector('.haedal-talk__bubble');
+            const tutorial = document.createElement('div');
+            tutorial.classList.add('tutorial');
+            faces[0].classList.add('text-blur');
+            faces[1].classList.add('text-blur');
+            faces[2].classList.add('text-blur');
+            faces[8].classList.add('text-blur');
+            faces[9].classList.add('text-blur');
+            hdtiBg.appendChild(tutorial);
+        };
+
+        function removeBlur() {
+            const tutorial = document.querySelector('.tutorial');
+            tutorial.classList.remove('tutorial');
+            faces[0].classList.remove('text-blur');
+            faces[1].classList.remove('text-blur');
+            faces[2].classList.remove('text-blur');
+            faces[8].classList.remove('text-blur');
+            faces[9].classList.remove('text-blur');
+        };
+
         for (let i=0; i<10; i++) {
             indices.push(indice);
             indice += 36;
@@ -73,16 +96,8 @@
         }
 
         // 튜토리얼 배경
-        const hdtiBg = document.querySelector('.hdti-bg');
-        // const haedalTalkBubble = document.querySelector('.haedal-talk__bubble');
-        const tutorial = document.createElement('div');
-        tutorial.classList.add('tutorial');
-        faces[0].classList.add('text-blur');
-        faces[1].classList.add('text-blur');
-        faces[2].classList.add('text-blur');
-        faces[8].classList.add('text-blur');
-        faces[9].classList.add('text-blur');
-        hdtiBg.appendChild(tutorial);
+        setBlur();
+
         // 튜토리얼
         haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">1번: 매우 그렇다.</p>
                                 <p class="haedal-talk__tutorial">2번: 조금 그렇다.</p>
@@ -95,12 +110,7 @@
 
         setTimeout(() => {
             // 블러 없애기
-            tutorial.classList.remove('tutorial');
-            faces[0].classList.remove('text-blur');
-            faces[1].classList.remove('text-blur');
-            faces[2].classList.remove('text-blur');
-            faces[8].classList.remove('text-blur');
-            faces[9].classList.remove('text-blur');
+            removeBlur();
             // 튜토리얼 없애기
             haedalTalk.style.display = 'none';
             // 버튼 이벤트리스너
@@ -129,11 +139,14 @@
                         haedalTalk.style.padding = '10px';
 
                         if(e.target.id == '1') {
-                            console.log('111');
+                            console.log(tracksArray);
                             // 트랙배열 받아서 보여주기
+                            for (let i=0; i<10; i++) {
+                                faces[i].innerText = tracksArray[i]; 
+                            }
                         } else if (e.target.id == '4') {
                             console.log('444');
-                            // 주원씨가 할 부분
+                            // 주원씨가 해줄거임
                             // answers
                         }
                     } else {
