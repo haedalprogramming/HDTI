@@ -3,6 +3,8 @@
   width:80%;
   height: 356px;
   transform: translateX(12%) translateY(15.5%);
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
   overflow: hidden;
   font-family: 'NEODGM';
 }

@@ -15,6 +15,14 @@ def hdti():
 def result2():
     return render_template('result2.html')
 
+@app.route('/resultAll')
+def result_all():
+    return render_template('result_all.html')
+
+@app.route('/share')
+def share():
+    return render_template('share.html')
+
 @app.route('/result', methods=["POST"])
 def result():
     score_A = score_T = score_R = score_F = score_E = score_C = score_P = score_I = score_gae = score_gi = 0
