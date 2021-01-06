@@ -14,7 +14,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  background: rgb(139, 136, 136);
+  background: linear-gradient(#4e4e4e, #3b3b3b);
   box-sizing: border-box;
   font-family: 'NEODGM';
 }
@@ -25,7 +25,7 @@ body {
   position: relative;
   background: url('../img/HDTI2.svg') center no-repeat;
   background-size: contain;
-  box-shadow: 8px 8px 10px dimgrey;
+  box-shadow: 8px 8px 10px #2b2b2b;
 }
 /* 여기부터 */
 .tutorial {
