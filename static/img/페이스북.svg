@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="53" viewBox="0 0 56 53">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 45 43">
+      <image width="45" height="43" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAArCAYAAADsQwGHAAADRUlEQVRYhe1ZzWvUQBR/b/LRdnuxfqAX0TaIXevHQS3oqRelnuq5Ry96Ev8DBc/iUfwLPBcERRC96OKhB6l1qdutFkFawWrZut0kuxmZaWabzVezSYbdgj8YZnbnZeaXX957M5OgaZrgxdSdF5AMFNZL52hCYzh2ZRHj+t8+vdFu12o1QESglIKiKLx4QXRdB2/pFaZuJxULANndCFy9NRdpuF46m1jVpAhTnynuVZrVfpCeSRsBobgQk9X+guyuGK7ffd0eRYaqSSHU9/q4H6plWV0PTLQmEN0GJOzxuYq0CNh/h3gfa1OKADQ29lJDTXOhY6u8RPXJRt/5dBKQ4eFhYOXNk+m+ILRWmpheK02oiqpE2nSkPKNY7VkA+lH5PMoDgmDQGfale+QeNdWywesWtQG5JginznzNdQ51e3s7t8EEYQYFVU44LcLcQgpp4Nsox6Uqz/NwbHw5t+BjSjvgAKEARr4uMVstG8/Ej9x9GpnOIZucrDCK1YI7RFPO8iUncc649bfMpL+UDfAuAztKdwalUaxmnaYDmaPFtlsxvXIkz0x6UBM6u/teRrTNtY92eV54H/1O9mjxRcUoruREMQAt92RKJGUPDw5IWAHk77kIgCN9knRgN+8ApWbgaKVa5hJv6APFvqJsW6tAKdtikJ/6wOmOvv15cukDDl3j/yFgByRTBqHUFq1ImzZpyyx3dKQPzGw52raW955hY2ODN85ffHcfAB6Ijl5lEyGeoh55qCiHyyEmv1TvaTzsYsQh0PSTUok27e/gOFtJzWvqyMiIVEIykCAQHXCcOm8RUtjTuhuIcSnEbW+D2JM0pSY07VXeztvPxbjdAv1vTZmPG+OvQh09b9L+jOXOMRthvuDWf7rK05ZZScMtF1QWRz+Jtrq1tRu17FNBocD99iYATFLqXEPEy7u5tymFEKL+AVFfAdR/JLJnX7c0TYPNzU3+ByMtPhgdH3v+GIDek3VsEiDKwUeqenQ+pOt3ZXH0ZcBeKhtJiFWaoV6vQ6PRgAuX3ud+JIkJuo/sHSYANJYWTgRSjPxvDelQmS8d4jsnb8ylIE1nKKWT3n8IGRoXTYh5yxkcCpqIg0xB/9MT+Tf6qQLAP2UhLuo4p9SkAAAAAElFTkSuQmCC"/>
+    </pattern>
+  </defs>
+  <rect id="페이스북" width="56" height="53" fill="url(#pattern)"/>
+</svg>

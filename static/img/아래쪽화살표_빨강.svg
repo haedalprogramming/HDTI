@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.824" height="50.505" viewBox="0 0 44.824 50.505">
+  <defs>
+    <pattern id="pattern" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 79.908, 0)" viewBox="0 0 39.954 39.954">
+      <use preserveAspectRatio="none" xlink:href="#image"/>
+    </pattern>
+    <pattern id="pattern-2" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 79.908, 0)" viewBox="0 0 39.954 39.954">
+      <use preserveAspectRatio="none" xlink:href="#image-2"/>
+    </pattern>
+    <image id="image" preserveAspectRatio="none" width="39.954" height="39.954" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAABQElEQVRoBeXBwQ2DMAAEMN/+Q1+/KA8iRCtKYsePlbohxBfFj5W6IcQXxY+VuiHEF8WPlbohxBfFTaUeFOKCuKnUg0JcEDeVelCIC+KmUg8KcUFMlHqRECdiotSLhDgRE6VeJMSJmCj1IiFOxESpFwtxEBOlXizEQUyUerEQBzFR6sVCHMSg1MJiUGphMSi1sBiUWlgMSi0sBqUWFoNSC4tBqYWl1EZSaiMptZGU2khKbSSlNpJSG0mpjaTURlJqIym1kZTaSEptJKU2klIbSamNxKDUwmJQamExKLWwGJRaWAxKLSwGpRYWg1ILi0GphcVEqRcLcRATpV4sxEFMlHqxEAcxUerFQhzERaX+WIgTcVGpPxbiRFxU6o+FOBEXlfpjIU7ETaUeFOKCuKnUg0JcEDeVelCIC+KmUg8KccEHyUt3/cg3fPwAAAAASUVORK5CYII="/>
+    <pattern id="pattern-3" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 79.908, 0)" viewBox="0 0 39.954 39.954">
+      <use xlink:href="#image"/>
+    </pattern>
+    <image id="image-2" preserveAspectRatio="none" width="39.954" height="39.954" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABHNCSVQICAgIfAhkiAAAAQ5JREFUaEPtmkkShCAQBMX/f23e5MTEXFwIsAIUCtKrjXZXFpsSPuu6PHxthc8Phe0PzQMF15Tz/ywIi5p2Z+lSgmL9l3BJkBp9mIJLkYntIZwS7I6lW1tWBL4kiVNwRE4Iqx57OX46S5/1PQgwYh+m4L0CEK6wu3l5jNJeFyPsNg1JFVMwlpYM038wlsbS/btUyvBn6aGnocs6k4Ilg/gFY2k/ZlrGENb08ouGsB8zLWMIa3r5RUPYj5mWMYQ1vfyipyR8xjT0/phvWnzT8huXkhljaSyNpb0V4Id4hJ/7QoRDLblOOR1ht7V28cE0Cs71gcb3IbwHcGcezgFrPahxIj5FCMI5/3a4EpMs/QWgT20Z3vsLSQAAAABJRU5ErkJggg=="/>
+  </defs>
+  <g id="그룹_89" data-name="그룹 89" transform="translate(0)">
+    <g id="그룹_14" data-name="그룹 14" transform="translate(4.869 10.551)" opacity="0.35">
+      <use id="d78ab3f552bcd84c683a6252a05ad78a" transform="translate(0 0)" xlink:href="#image"/>
+      <rect id="d78ab3f552bcd84c683a6252a05ad78a-2" data-name="d78ab3f552bcd84c683a6252a05ad78a" width="39.954" height="39.954" transform="translate(0 0)" fill="url(#pattern)"/>
+    </g>
+    <g id="그룹_3" data-name="그룹 3" transform="translate(0)">
+      <g id="그룹_1" data-name="그룹 1">
+        <use id="d78ab3f552bcd84c683a6252a05ad78a-3" data-name="d78ab3f552bcd84c683a6252a05ad78a" transform="translate(0 6.659)" xlink:href="#image-2"/>
+        <use id="d78ab3f552bcd84c683a6252a05ad78a-4" data-name="d78ab3f552bcd84c683a6252a05ad78a" xlink:href="#image"/>
+      </g>
+      <g id="그룹_2" data-name="그룹 2" transform="translate(3.995)">
+        <rect id="d78ab3f552bcd84c683a6252a05ad78a-5" data-name="d78ab3f552bcd84c683a6252a05ad78a" width="39.954" height="39.954" transform="translate(0 6.659)" fill="url(#pattern-2)"/>
+        <rect id="d78ab3f552bcd84c683a6252a05ad78a-6" data-name="d78ab3f552bcd84c683a6252a05ad78a" width="39.954" height="39.954" fill="url(#pattern-3)"/>
+      </g>
+    </g>
+    <path id="다각형_1" data-name="다각형 1" d="M6.9,0l6.9,11.362H0Z" transform="translate(29.216 26.925) rotate(180)" fill="#fff"/>
+  </g>
+</svg>

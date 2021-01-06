@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="54" viewBox="0 0 56 54">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 45 44">
+      <image width="45" height="44" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAsCAYAAADxRjE/AAAABHNCSVQICAgIfAhkiAAAAjZJREFUWEftmctKw0AUhv/E2HpZiOLChVIQQRciKtqFexFc6FbfwoVuVXAtvoG48kkkIN4QsxIsKiK4EgTrrXUk2ilJ2ibnNDPWS7Jrc2bmO//856SZGkII/LbLeLuMhczJ2Kh3JSvjX+bPQ3NUpYpKUj+O0j8eWgdg3epTlU6gqRKX4ip8nijNVJAbXlY8SmmWlyfHOskgByf35NigTZRAc2CDpAx4dUrHAZYJEMHVQKsAZoDHh1YJTAQPhY4sPh3ARPDPMCsjfL3b/ZWXQHP7GqUoE6W5qlaLT5T2qvIru4ebgC5wbfbQBU0BrrtPS6uoVJsKDKBoZYTltatxsvv1cBmeovUCFeAU4NwxkH8GTAM3IwuiLxZ0HNUpsHL+hkNzYL8Nuh6oKDNqVVoHsJvQxRHw9BLh6WDmYYUpi1EHsGP7SaoWojw1dWysAViXQ6jdJGqbufcldE8XNnpmxGq18eVT0yC0DG5rAfrHuUvz4q9PgYdH/5j/B92SAgYmeMoxol8AXOYOMZh/Vai0dypFPnefwHkA546NsVoJkuzhHezY1d8bFUC/AcgB2AGw7di4C0KPLvpfYkMLkQJtNTE2nhBaKFYGxYGeB5AtFjFtGpg0TAJBjJB0M/bTKeRSFm57Z8Vy1FShfxQ5NrbEO5Z0Q3d3YLMWbOHKcM89fHn8PWiKz6O2Muw+xb9spRsJ7cLKi2UPL/TZHubeBbLe79pbMVT6bLJq1UShNY2rvlmxUmsnwqA/ANvFZLjHNJPHAAAAAElFTkSuQmCC"/>
+    </pattern>
+  </defs>
+  <rect id="카카오톡" width="56" height="54" fill="url(#pattern)"/>
+</svg>
