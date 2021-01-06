@@ -1,4 +1,4 @@
-.share-btns {
+/* .share-btns {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -10,4 +10,47 @@
 .share-btn {
     width: 56px;
     height: 54px;
+} */
+.share-btns {
+    position: absolute;
+    top: 439px;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.share-btn {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    cursor: pointer;
+}
+
+.up-btn {
+    top: 9px;
+    left: 90px;
+}
+
+.right-btn {
+    top: 50px;
+    left: 143px;
+}
+
+.down-btn {
+    top: 95px;
+    left: 90px;
+}
+
+.left-btn {
+    top: 50px;
+    left: 38px;
+}
+
+.ok-btn {
+    top: 32px;
+    left: 273px;
+}
+
+.back-btn {
+    top: 80px;
+    left: 230px;
 }
