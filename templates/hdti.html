@@ -37,6 +37,7 @@
     let indices_idx = 0;
     let clickCnt = 0;
     let answers = [];
+    let isTrack = false;
 
     const haedalTalks = ['누르면 아파!', '해달이는 귀여워', '오늘 점심은 마라탕 어떠세요'];
     const questions = questionsArray.slice(10);
@@ -161,7 +162,8 @@
                 clickCnt += 1;
 
                 // 트랙 check
-                if (clickCnt > 28) {
+                if (clickCnt > 27) {
+                    console.log('clickCnt', clickCnt);
                     haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">트랙 검사로 넘어갈까요?</p>
                             <p class="haedal-talk__track"><span style="color: blue">YES</span> - 1 <span style="color: red">NO</span> - 4</p>`        
                     haedalTalk.style.display = 'flex';
@@ -170,7 +172,7 @@
                     haedalTalk.style.alignItems = 'center';
                     haedalTalk.style.padding = '10px';
 
-                    if(e.target.id == '1') {
+                    if(clickCnt == 29 & e.target.id == '1') {
                         console.log(tracksArray);
                         haedalTalk.style.display = 'none';
 
@@ -178,17 +180,20 @@
                         for (let i=0; i<10; i++) {
                             faces[i].innerText = tracksArray[i]; 
                         }
-
-                        // 질문지 회전시키기 
-                        rotateFace();
-                        answers.push(e.target.id);
-                        console.log(answers);
-                    } else if (e.target.id == '4') {
+                        // 트랙체크
+                        isTrack = true;
+                    } else if (clickCnt == 29 & e.target.id == '4') {
                         console.log('444');
                         haedalTalk.style.display = 'none';
 
                         // 주원씨가 해줄거임
-                        // answers
+                        // answers 
+                    }
+                    if (isTrack & clickCnt > 29) {
+                        // 질문지 회전시키기 
+                        rotateFace();
+                        answers.push(e.target.id);
+                        console.log(answers);
                     }
                 } else {
                     answers.push(e.target.id);
