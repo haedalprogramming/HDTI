@@ -9,7 +9,7 @@ def index():
 
 @app.route('/hdti')
 def hdti():
-    return render_template('hdti.html', questions=loadquestion.questions, tracks=loadquestion.tracks)
+    return render_template('hdti.html', questions=loadquestion.questions)
 
 @app.route('/test')
 def result2():

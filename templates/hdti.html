@@ -20,7 +20,6 @@
 {% block script %}
     const cube = document.querySelector('.cube');
     const questionsArray = {{ questions|tojson }};
-    const tracksArray = {{ tracks|tojson }}; 
 
     for (let i=0; i<10; i++) {
         const face = document.createElement('div');
@@ -37,11 +36,9 @@
     let indices_idx = 0;
     let clickCnt = 0;
     let answers = [];
-    let isTrack = false;
 
     const haedalTalks = ['누르면 아파!', '해달이는 귀여워', '오늘 점심은 마라탕 어떠세요'];
     const questions = questionsArray.slice(10);
-    console.log('questions', questions);
     let questions_idx = 0;
 
     function setBlur() {
@@ -141,6 +138,8 @@
     haedalTalk.style.justifyContent = 'center';
     haedalTalk.style.alignItems = 'center';
 
+    console.log('questionsArray',questionsArray)
+
     setTimeout(() => {
         // 블러 없애기
         removeBlur();
@@ -149,58 +148,36 @@
         // 버튼 이벤트리스너
         btns.addEventListener('click', function(e) {
             if (e.target.id == 'haedalCharacter') {
-                let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
-                haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
-                
-                haedalTalk.style.display = 'flex';
-                haedalTalk.style.justifyContent = 'center';
-                haedalTalk.style.alignItems = 'center';
+                if(clickCnt > 28) {
+                    haedalTalk.style.display = 'none';
+                    // 주원씨가 해줄거임
+                    // answers 
+                } else {
+                    let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
+                    haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
+                    
+                    haedalTalk.style.display = 'flex';
+                    haedalTalk.style.justifyContent = 'center';
+                    haedalTalk.style.alignItems = 'center';
+                }
             } else {
                 //해달이 말풍선 없애기
                 haedalTalk.style.display = 'none';
 
                 clickCnt += 1;
 
-                // 트랙 check
-                if (clickCnt > 27) {
-                    console.log('clickCnt', clickCnt);
-                    haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">트랙 검사로 넘어갈까요?</p>
-                            <p class="haedal-talk__track"><span style="color: blue">YES</span> - 1 <span style="color: red">NO</span> - 4</p>`        
+                if(clickCnt > 28) {
+                    haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">저를 눌러주세요!</p>`        
                     haedalTalk.style.display = 'flex';
                     haedalTalk.style.flexDirection = 'column';
                     haedalTalk.style.justifyContent = 'center';
                     haedalTalk.style.alignItems = 'center';
-                    haedalTalk.style.padding = '10px';
-
-                    if(clickCnt == 29 & e.target.id == '1') {
-                        console.log(tracksArray);
-                        haedalTalk.style.display = 'none';
-
-                        // 트랙배열 받아서 보여주기
-                        for (let i=0; i<10; i++) {
-                            faces[i].innerText = tracksArray[i]; 
-                        }
-                        // 트랙체크
-                        isTrack = true;
-                    } else if (clickCnt == 29 & e.target.id == '4') {
-                        console.log('444');
-                        haedalTalk.style.display = 'none';
-
-                        // 주원씨가 해줄거임
-                        // answers 
-                    }
-                    if (isTrack & clickCnt > 29) {
-                        // 질문지 회전시키기 
-                        rotateFace();
-                        answers.push(e.target.id);
-                        console.log(answers);
-                    }
                 } else {
                     answers.push(e.target.id);
                     console.log(answers);
                     // 질문지 회전시키기                    
                     rotateFace();
-
+    
                     // 한 바퀴 돌고난 후 질문 바꾸기
                     if (clickCnt > 7 && questions.length) {
                         faces[questions_idx].innerText = questions.shift();
