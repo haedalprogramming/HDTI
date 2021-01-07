@@ -8,13 +8,16 @@
     <div id="haedalTalk" class="haedal-talk">
         <span class="haedal-talk__bubble"></span>
     </div>
-    <div class="btns">
-        <img id="1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
-        <img id="2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼">
-        <img id="3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼">
-        <img id="4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
-        <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
-    </div>
+    <form method="POST" action="/test">
+        <input type="text" id="answersInput" name="answersInput" hidden>
+        <div class="btns">
+            <img id="1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
+            <img id="2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼">
+            <img id="3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼">
+            <img id="4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
+            <button><img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
+        </div>
+    </form>
 {% endblock %}
 
 {% block script %}
@@ -30,6 +33,7 @@
 
     const faces = document.querySelectorAll('.cube__face');
     const haedalTalk = document.querySelector('#haedalTalk');
+    const answersInput = document.querySelector('#answersInput');
     const btns = document.querySelector('.btns');
     let indices = [];
     let indice = 0;
@@ -151,7 +155,8 @@
                 if(clickCnt > 28) {
                     haedalTalk.style.display = 'none';
                     // 주원씨가 해줄거임
-                    // answers 
+                    // answers
+                    answersInput.value = answers;
                 } else {
                     let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
                     haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 

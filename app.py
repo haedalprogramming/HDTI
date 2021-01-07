@@ -11,8 +11,11 @@ def index():
 def hdti():
     return render_template('hdti.html', questions=loadquestion.questions)
 
-@app.route('/test')
+@app.route('/test', methods=["POST","GET"])
 def result2():
+    result_listname = 'answersInput'
+    result_list = request.form[result_listname]
+
     return render_template('result2.html')
 
 @app.route('/resultAll')
