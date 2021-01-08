@@ -3,6 +3,9 @@ from flask import render_template,  Flask, request
 
 app = Flask(__name__)
 
+def maketype():
+    return 0
+
 @app.route('/')
 def index():
     return render_template('loading.html')
