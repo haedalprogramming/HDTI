@@ -36,7 +36,7 @@
   line-height: 1.3;
 }
 
-.result-detail, .result-track {
+.result-detail{
   text-align: center;
 }
 
@@ -54,24 +54,6 @@
   font-size: 12px;
   word-break: keep-all;
   line-height: 1.5;
-}
-
-.result-track__title{ 
-  margin: 0;
-  margin-top: 50px;
-  color: #fff;
-  font-size: 25px;
-}
-
-.result-track__image {
-  margin-top: 30px;
-  width: 128px;
-  height: 138px;
-}
-
-.result-track__name {
-  margin: 0;
-  color: #fff;
 }
 
 .result-option {
