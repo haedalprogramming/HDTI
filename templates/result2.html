@@ -3,6 +3,8 @@
 {% block title %} 해달 MBTI 결과 {% endblock %}
 
 {% block content %}
+    <div class="charger-wrap">
+    </div>
     <div class="result-wrap">
         <div class="result">
             <img class="result__character" src={{ img }} alt="캐릭터">
@@ -79,4 +81,13 @@
         btns.style.display = 'block';
         shareBtns.style.display = 'none';
     });
+
+    // 문항 수 표시
+    const chargerBox = document.querySelector('.charger-wrap');
+    
+    for (let i=0; i<28; i++) {
+        const charger = document.createElement('span');
+        charger.classList.add('charger');
+        chargerBox.appendChild(charger);
+    }
 {% endblock %}

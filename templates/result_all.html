@@ -3,6 +3,8 @@
 {% block title %} 해달 MBTI 전체결과 {% endblock %}
 
 {% block content %}
+    <div class="charger-wrap">
+    </div>
     <img class="hdti-title__info" src="../static/img/haedal_title.svg" alt="title">
     <p class="result-title">다른 개발자들의 유형은?</p>
     <div class="result-all-wrap">
@@ -21,4 +23,14 @@
         <img id="okBtn" class="result-btn ok-btn" src="../static/img/OK.svg" alt="버튼">
         <img id="backBtn" class="result-btn back-btn" src="../static/img/왼쪽화살표_파랑.svg" alt="버튼">
     </div>
+{% endblock %}
+
+{% block script %}
+    const chargerBox = document.querySelector('.charger-wrap');
+    
+    for (let i=0; i<28; i++) {
+        const charger = document.createElement('span');
+        charger.classList.add('charger');
+        chargerBox.appendChild(charger);
+    }
 {% endblock %}

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="charger-wrap">
+    </div>
     <div class="cube-wrap">
         <div class="cube is-backface-hidden">
         </div>
@@ -36,6 +38,7 @@
     const answersInput = document.querySelector('#answersInput');
     const btns = document.querySelector('.btns');
     const haedalBtn = document.querySelector('.haedal-btn');
+    const chargerBox = document.querySelector('.charger-wrap');
 
     let indices = [];
     let indice = 0;
@@ -164,6 +167,7 @@
         // 버튼 이벤트리스너
         btns.addEventListener('click', function(e) {
             if (e.target.id == 'haedalCharacter') {
+                // 검사 항목 제출
                 if(clickCnt > 28) {
                     haedalTalk.style.display = 'none';
                     answersInput.value = answers;
@@ -189,8 +193,12 @@
                     haedalTalk.style.justifyContent = 'center';
                     haedalTalk.style.alignItems = 'center';
                 } else {
+                    // 문항 수 표시하기
+                    const charger = document.createElement('span');
+                    charger.classList.add('charger');
+                    chargerBox.appendChild(charger);
+
                     answers.push(e.target.id);
-                    console.log(answers);
                     // 질문지 회전시키기                    
                     rotateFace();
     

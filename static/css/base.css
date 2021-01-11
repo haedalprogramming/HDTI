@@ -25,3 +25,19 @@ body {
     background: url('../img/HDTI2.svg') center no-repeat;
     background-size: contain;
 }
+
+.charger-wrap{
+    position: absolute;
+    top: 16.5px;
+    left: 23px;
+    width: 88%;
+    height: 22px;
+  }
+  
+.charger {
+    display: inline-block;
+    width: 9.5px;
+    height:16px;
+    margin: 1px;
+    background: #00ff4c;
+}
