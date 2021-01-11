@@ -6,13 +6,25 @@
 }
 
 .result-all-wrap {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 220px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 23px;
+    row-gap: 20px;
+    transform: translateX(17%) translateY(85%);
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
+.result-all-wrap::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.thumnail {
+    width: 70px;
+    height: 70px;
+}
 .result-btns {
     position: absolute;
     top: 439px;
