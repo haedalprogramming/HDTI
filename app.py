@@ -16,17 +16,21 @@ def hdti():
 def result2():
     result_listname = 'answersInput'
     result_list = request.form[result_listname]
+    result_list = result_list.split(',')
+    print(result_list)
     score_A = score_T = score_R = score_F = score_E = score_C = score_P = score_I = score_gae = score_gi = 0
-    score_A = result_list[0] + result_list[7]
-    score_T = result_list[9] + result_list[8]
-    score_R = result_list[6] + result_list[4] + result_list[2]
-    score_F = result_list[5] + result_list[3] + result_list[1]
-    score_E = result_list[10] + result_list[12] + result_list[14]
-    score_C = result_list[11] + result_list[13] + result_list[15]
-    score_P = result_list[16] + result_list[18] + result_list[20]
-    score_I = result_list[17] + result_list[19] + result_list[21]
-    score_gae = result_list[22] + result_list[24] + result_list[26]
-    score_gi = result_list[23] + result_list[25] + result_list[27]
+    score_A = int(result_list[0]) + int(result_list[7])
+    score_T = int(result_list[9]) + int(result_list[8])
+    score_R = int(result_list[6]) + int(result_list[4]) + int(result_list[2])
+    score_F = int(result_list[5]) + int(result_list[3]) + int(result_list[1])
+    score_E = int(result_list[10]) + int(result_list[12]) + int(result_list[14])
+    score_C = int(result_list[11]) + int(result_list[13]) + int(result_list[15])
+    score_P = int(result_list[16]) + int(result_list[18]) + int(result_list[20])
+    score_I = int(result_list[17]) + int(result_list[19]) + int(result_list[21])
+    score_gae = int(result_list[22]) + int(result_list[24]) + int(result_list[26])
+    score_gi  = int(result_list[23]) + int(result_list[25]) + int(result_list[27])
+
+    print(score_A, score_T, score_R, score_F, score_E, score_C, score_P, score_I)
     if score_A >= score_T:
         type_1 = 'T'
     else:
