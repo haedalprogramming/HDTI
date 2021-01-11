@@ -15,7 +15,7 @@
             <img id="2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼">
             <img id="3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼">
             <img id="4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
-            <button><img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
+            <button class="haedal-btn"><img id="haedalCharacter" src="../static/img/btn_haedal.svg" alt="버튼"></button>
         </div>
     </form>
 {% endblock %}
@@ -35,6 +35,8 @@
     const haedalTalk = document.querySelector('#haedalTalk');
     const answersInput = document.querySelector('#answersInput');
     const btns = document.querySelector('.btns');
+    const haedalBtn = document.querySelector('.haedal-btn');
+
     let indices = [];
     let indice = 0;
     let indices_idx = 0;
@@ -71,8 +73,10 @@
     function rotateFace() {
         for(let i=0; i < faces.length; i++){
             indices[i] += 36;
-            // indices[i] = indices[i] + 60 + 360 * 3;
             faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
+            faces[i].style.transition = '1s';
+            faces[i].style.transitionTimingFunction = 'ease';
+            faces[i].style.delay = '0s';
         } 
         
         // next indices_idx값
@@ -149,15 +153,22 @@
         removeBlur();
         // 튜토리얼 없애기
         haedalTalk.style.display = 'none';
+        // 핑그르르르
+        for(let i=0; i < faces.length; i++){
+            indices[i] = indices[i] + 360 * 4;
+            faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
+            faces[i].style.transition = '1.3s';
+            faces[i].style.transitionTimingFunction = 'ease-in-out';
+            faces[i].style.delay = '.2s';
+        } 
         // 버튼 이벤트리스너
         btns.addEventListener('click', function(e) {
             if (e.target.id == 'haedalCharacter') {
                 if(clickCnt > 28) {
                     haedalTalk.style.display = 'none';
-                    // 주원씨가 해줄거임
-                    // answers
                     answersInput.value = answers;
                 } else {
+                    e.preventDefault();
                     let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
                     haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
                     

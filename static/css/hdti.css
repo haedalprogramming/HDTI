@@ -156,8 +156,13 @@ button:focus {
 
 .haedal-btn {
   position: absolute;
-  top: 7px;
-  left: 149px;
-  width: 72px;
+  top: 5px;
+  left: 145px;
+  border: none;
+  background: transparent;
   cursor: pointer;
+}
+
+.haedal-btn img {
+  width: 72px;
 }
