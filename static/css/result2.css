@@ -57,6 +57,12 @@
   word-break: keep-all;
   line-height: 1.7;
   overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.result-detail__content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 .result-option {
