@@ -19,10 +19,13 @@
         </div>
         <div class="result-option">
             <p id="resultOption1">1. 자세히보기</p>
-            <p>2. 전체보기</p>
+            <p>2. 전체유형</p>
             <p>3. 다시하기</p>
             <p>4. 공유하기</p>
         </div>
+    </div>
+    <div id="haedalTypeTalk" class="haedal-type-talk">
+        <img src="../static/img/type_desc.svg" alt="type">
     </div>
     <div class="btns">
         <img id="btn1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
@@ -44,6 +47,8 @@
 {% block script %}
     const btns = document.querySelector('.btns');
     const shareBtns = document.querySelector('.share-btns');
+    const haedalTypeTalk = document.querySelector('#haedalTypeTalk');
+    const haedalCharacter = document.querySelector('#haedalCharacter');
     const detailBtn = document.querySelector('#btn1');
     const shareBtn = document.querySelector('#btn4');
     const backBtn = document.querySelector('#backBtn');
@@ -54,6 +59,7 @@
     const resultOption4Btn = document.querySelector('#resultOption4');
     
     let isClicked = true;
+    let isTypeClicked = false;
 
     detailBtn.addEventListener('click', function() {
         if(isClicked) {
@@ -68,6 +74,16 @@
             isClicked = true;
         }
         
+    });
+
+    haedalCharacter.addEventListener('click', function() {
+        if(isTypeClicked) {
+            haedalTypeTalk.style.display = 'none';
+            isTypeClicked = false;
+        } else {
+            haedalTypeTalk.style.display = 'block';
+            isTypeClicked = true;
+        }
     });
 
     shareBtn.addEventListener('click', function() {
