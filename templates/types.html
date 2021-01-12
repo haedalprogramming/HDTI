@@ -1,85 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Another types</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
-</head>
-<body>
-<p> </p>
-<div class = "title">
-        <div class = "character">
-        <img src = "../static/haedalcharac.png" class="mainlogo">
-        </div>
-        <div class="hdti1">H D T I</div>
-        <div class="hdti2">Hae<br>Dal<br>Type<br>Indicator</div>
-</div>
-<p>　</p><p>　</p><p>　</p>
-<div class="out-out">
-    <div class="row">
-        <div class="indiv">
-            <div class="indiv_title">AREI</div><div class="indiv_ex">괴짜<br>프로그래머</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">AREP</div><div class="indiv_ex">소심한<br>아이디어뱅크</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">ARCI</div><div class="indiv_ex">에디슨형</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">ARCP</div><div class="indiv_ex">극한의<br>효율형</div>
-        </div>
+{% extends 'base.html' %}
+
+{% block title %} 해달 MBTI 전체결과 {% endblock %}
+
+{% block content %}
+    <div class="charger-wrap">
     </div>
-    <div class="row">
-        <div class="indiv">
-            <div class="indiv_title">AFEI</div><div class="indiv_ex">코딩계<br>마당발</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">AFEP</div><div class="indiv_ex">지옥에서 온<br>개발자</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">AFCI</div><div class="indiv_ex">내일은<br>코딩왕</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">AFCP</div><div class="indiv_ex">꾸준한<br>거북이</div>
-        </div>
+    <img class="hdti-title__info" src="../static/img/haedal_title.svg" alt="title">
+    <p class="result-title">다른 개발자들의 유형은?</p>
+    <div class="result-all-wrap">
+        <a href=""><img class="thumnail" src="../static/img/thumnail/스팸.png" alt="버튼"></a>
+        <img class="thumnail" src="../static/img/thumnail/시라용.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/아리.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/해달이.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/김두근.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/매기.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/부기.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/사스미.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/흐규.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/스팸.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/시라용.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/아리.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/해달이.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/김두근.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/매기.png" alt="버튼">
+        <img class="thumnail" src="../static/img/thumnail/부기.png" alt="버튼">
     </div>
-    <div class="row">
-        <div class="indiv">
-            <div class="indiv_title">TREI</div><div class="indiv_ex">환상의<br>효율장인</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">TREP</div><div class="indiv_ex">유니콘형</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">TRCI</div><div class="indiv_ex">코딩계<br>스파크</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">TRCP</div><div class="indiv_ex">기가지니</div>
-        </div>
+    <div class="result-btns">
+        <img id="upBtn" class="result-btn up-btn" src="../static/img/윗쪽화살표_빨강.svg" alt="버튼">
+        <img id="rightBtn" class="result-btn right-btn" src="../static/img/오른쪽화살표_빨강.svg" alt="버튼">
+        <img id="downBtn" class="result-btn down-btn" src="../static/img/아래쪽화살표_빨강.svg" alt="버튼">
+        <img id="leftBtn" class="result-btn left-btn" src="../static/img/왼쪽화살표_빨강.svg" alt="버튼">
+        <img id="okBtn" class="result-btn ok-btn" src="../static/img/OK.svg" alt="버튼">
+        <a href="../result"><img id="backBtn" class="result-btn back-btn" src="../static/img/왼쪽화살표_파랑.svg" alt="버튼"></a>
     </div>
-    <div class="row">
-        <div class="indiv">
-            <div class="indiv_title">TFEI</div><div class="indiv_ex">인스타스타</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">TFEP</div><div class="indiv_ex">조별과제의<br>왕</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">TFCI</div><div class="indiv_ex">아이디어<br>뱅크</div>
-        </div>
-        <div class="indiv">
-            <div class="indiv_title">TFCP</div><div class="indiv_ex">회장의 재목</div>
-        </div>
-    </div>
-</div>
-<p> </p>
-<div class = "info">
-    <p>Github 주소: <a href="https://github.com/haedal-with-knu">해달 깃헙</a></p>
-    <p>카카오톡 오픈채팅방: <a href="https://open.kakao.com/o/sF50Amtc">해달 오픈채팅방</a></p>
-    <p>문의: 해달 부회장 이준병(010-2509-0636)</p>
-    <p><a href="../">Try Again</a></p>
-</div>
-</body>
-</html>
+{% endblock %}
+
+{% block script %}
+    const chargerBox = document.querySelector('.charger-wrap');
+
+    // 문항 수 표시
+    for (let i=0; i<28; i++) {
+        const charger = document.createElement('span');
+        charger.classList.add('charger');
+        chargerBox.appendChild(charger);
+    }
+{% endblock %}

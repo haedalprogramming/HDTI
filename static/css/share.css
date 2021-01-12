@@ -1,16 +1,3 @@
-/* .share-btns {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 439px;
-    width: 100%;
-    padding: 10px 50px;
-}
-
-.share-btn {
-    width: 56px;
-    height: 54px;
-} */
 .share-btns {
     position: absolute;
     top: 439px;

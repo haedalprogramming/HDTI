@@ -12,12 +12,11 @@ def index():
 def hdti():
     return render_template('hdti.html', questions=loadquestion.questions)
 
-@app.route('/test', methods=["POST","GET"])
-def result2():
+@app.route('/result', methods=["POST","GET"])
+def result():
     result_listname = 'answersInput'
     result_list = request.form[result_listname]
     result_list = result_list.split(',')
-    print(result_list)
     score_A = score_T = score_R = score_F = score_E = score_C = score_P = score_I = score_gae = score_gi = 0
     score_A = int(result_list[0]) + int(result_list[7])
     score_T = int(result_list[9]) + int(result_list[8])
@@ -30,7 +29,6 @@ def result2():
     score_gae = int(result_list[22]) + int(result_list[24]) + int(result_list[26])
     score_gi  = int(result_list[23]) + int(result_list[25]) + int(result_list[27])
 
-    print(score_A, score_T, score_R, score_F, score_E, score_C, score_P, score_I)
     if score_A >= score_T:
         type_1 = 'T'
     else:
@@ -122,15 +120,7 @@ def result2():
         explanation2 = '아이디어를 코드로 풀어내는 것을 선호하는 개발자 유형이다. 문서 작성 시에는 주로 깃허브나 노션을 이용한다. 창의력은 부족하지만 맡은 일만큼은 훌륭하게 해낸다.'
     elif type_5 == '기':
         explanation2 = '아이디어를 말이나 글로 풀어내는 것을 선호하는 기획자 유형이다. 문서 작성 시에는 주로 워드나 한글을 이용한다. 상상력이 풍부하고 타인에게 일을 시키는 것을 잘 하는 편이다.'
-    return render_template('result2.html', img=img_src, type=type_name, explanation=explanation, type_ex=type_ex)
-
-@app.route('/resultAll')
-def result_all():
-    return render_template('result_all.html')
-
-@app.route('/share')
-def share():
-    return render_template('share.html')
+    return render_template('result.html', img=img_src, type=type_name, explanation=explanation, type_ex=type_ex)
 
 @app.route('/types')
 def types():
