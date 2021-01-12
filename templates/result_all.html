@@ -31,13 +31,14 @@
         <img id="downBtn" class="result-btn down-btn" src="../static/img/아래쪽화살표_빨강.svg" alt="버튼">
         <img id="leftBtn" class="result-btn left-btn" src="../static/img/왼쪽화살표_빨강.svg" alt="버튼">
         <img id="okBtn" class="result-btn ok-btn" src="../static/img/OK.svg" alt="버튼">
-        <img id="backBtn" class="result-btn back-btn" src="../static/img/왼쪽화살표_파랑.svg" alt="버튼">
+        <a href="../test"><img id="backBtn" class="result-btn back-btn" src="../static/img/왼쪽화살표_파랑.svg" alt="버튼"></a>
     </div>
 {% endblock %}
 
 {% block script %}
     const chargerBox = document.querySelector('.charger-wrap');
 
+    // 문항 수 표시
     for (let i=0; i<28; i++) {
         const charger = document.createElement('span');
         charger.classList.add('charger');
