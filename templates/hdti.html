@@ -157,12 +157,16 @@
             faces[i].style.transition = '1.3s';
             faces[i].style.transitionTimingFunction = 'ease-in-out';
             faces[i].style.delay = '.2s';
-        } 
+        }
+    }, 3000);
+
+    // 핑그르르 1.3초 동안 진행되므로 4300 후에 버튼 이벤트 붙임
+    setTimeout(() => {
         // 버튼 이벤트리스너
         btns.addEventListener('click', function(e) {
             if (e.target.id == 'haedalCharacter') {
                 // 검사 항목 제출
-                if(clickCnt > 28) {
+                if(answers.length == 28) {
                     haedalTalk.style.display = 'none';
                     answersInput.value = answers;
                 } else {
@@ -179,22 +183,26 @@
                 haedalTalk.style.display = 'none';
 
                 clickCnt += 1;
-
-                if(clickCnt > 28) {
-                    haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">저를 눌러주세요!</p>`        
-                    haedalTalk.style.display = 'flex';
-                    haedalTalk.style.flexDirection = 'column';
-                    haedalTalk.style.justifyContent = 'center';
-                    haedalTalk.style.alignItems = 'center';
-                } else {
+                
+                if (clickCnt < 29) {
                     // 문항 수 표시하기
                     const charger = document.createElement('span');
                     charger.classList.add('charger');
                     chargerBox.appendChild(charger);
-
+    
                     answers.push(e.target.id);
-                    // 질문지 회전시키기                    
-                    rotateFace();
+
+                    if (answers.length == 28) {
+                        haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">저를 눌러주세요!</p>`        
+                        haedalTalk.style.display = 'flex';
+                        haedalTalk.style.flexDirection = 'column';
+                        haedalTalk.style.justifyContent = 'center';
+                        haedalTalk.style.alignItems = 'center';
+                    }
+                    if (clickCnt < 28) {
+                        // 질문지 회전시키기                    
+                        rotateFace();
+                    }
     
                     // 한 바퀴 돌고난 후 질문 바꾸기
                     if (clickCnt > 7 && questions.length) {
@@ -204,7 +212,7 @@
                 }
             }
         });
-    }, 3000);
+    }, 4300);    
 {% endblock %}
 </body>
 </html>
