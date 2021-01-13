@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="216" height="218.001" viewBox="0 0 216 218.001">
+  <g id="그룹_126" data-name="그룹 126" transform="translate(-72 -219)">
+    <path id="합치기_10" data-name="합치기 10" d="M231.462-1784H129v-202H345v202H242.538L237-1768Z" transform="translate(-57 2205)" fill="#fff"/>
+    <text id="항목_유형" data-name="항목 유형" transform="translate(180 254)" font-size="15" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-33.75" y="0">항목 유형</tspan></text>
+    <g id="그룹_122" data-name="그룹 122">
+      <text id="혼자형_A" data-name="혼자형 A" transform="translate(113 297)" fill="red" font-size="10" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-20" y="0" fill="#000">혼자형 </tspan><tspan y="0" fill="red">A</tspan></text>
+      <text id="함께형_T" data-name="함께형 T" transform="translate(242 297)" fill="#0008ff" font-size="10" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-20" y="0" fill="#000">함께형 </tspan><tspan y="0" fill="#0008ff">T</tspan></text>
+      <line id="선_1" data-name="선 1" x2="78" transform="translate(138.5 294.5)" fill="none" stroke="#000" stroke-width="1"/>
+    </g>
+    <g id="그룹_123" data-name="그룹 123" transform="translate(0 10)">
+      <text id="찐st개발자_R" data-name="찐st개발자 R" transform="translate(113 320)" fill="red" font-size="10" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-30" y="0" fill="#000">찐st개발자 </tspan><tspan y="0" fill="red">R</tspan></text>
+      <text id="패션개발자_F" data-name="패션개발자 F" transform="translate(242 320)" fill="#0008ff" font-size="10" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-30" y="0" fill="#000">패션개발자 </tspan><tspan y="0" fill="#0008ff">F</tspan></text>
+      <line id="선_2" data-name="선 2" x2="57" transform="translate(149.5 317.5)" fill="none" stroke="#000" stroke-width="1"/>
+    </g>
+    <g id="그룹_124" data-name="그룹 124" transform="translate(0 20)">
+      <text id="과몰입파_E" data-name="과몰입파 E" transform="translate(113 342)" fill="#ff0101" font-size="10" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-25" y="0" fill="#000">과몰입파 </tspan><tspan y="0" fill="#ff0101">E</tspan></text>
+      <text id="논리파_L" data-name="논리파 L" transform="translate(242 342)" fill="#0008ff" font-size="10" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-20" y="0" fill="#000">논리파 </tspan><tspan y="0" fill="#0008ff">L</tspan></text>
+      <line id="선_3" data-name="선 3" x2="73" transform="translate(143.5 339.5)" fill="none" stroke="#000" stroke-width="1"/>
+    </g>
+    <g id="그룹_125" data-name="그룹 125" transform="translate(0 30)">
+      <text id="즉흥형_I" data-name="즉흥형 I" transform="translate(113 365)" fill="red" font-size="10" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-20" y="0" fill="#000">즉흥형 </tspan><tspan y="0" fill="red">I</tspan></text>
+      <text id="계획형_P" data-name="계획형 P" transform="translate(242 365)" fill="#0008ff" font-size="10" font-family="NeoDunggeunmo-Regular, NeoDunggeunmo"><tspan x="-20" y="0" fill="#000">계획형 </tspan><tspan y="0" fill="#0008ff">P</tspan></text>
+      <line id="선_4" data-name="선 4" x2="78" transform="translate(138.5 362.5)" fill="none" stroke="#000" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

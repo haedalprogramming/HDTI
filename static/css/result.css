@@ -3,8 +3,6 @@
   width:80%;
   height: 356px;
   transform: translateX(12%) translateY(15.5%);
-  /* overflow-x: hidden;
-  overflow-y: scroll; */
   overflow: hidden;
   font-family: 'NEODGM';
 }
@@ -56,13 +54,6 @@
   font-size: 12px;
   word-break: keep-all;
   line-height: 1.7;
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-.result-detail__content::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
 }
 
 .result-option {
@@ -74,4 +65,13 @@
   bottom: 15px;
   color: #00ff4c;
   font-size: 10px;
+}
+
+.haedal-type-talk {
+  display: none;
+}
+
+.haedal-type-talk img{
+  width: 220px;
+  transform: translateX(74px) translateY(-135px);
 }
