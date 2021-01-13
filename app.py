@@ -52,7 +52,8 @@ def result():
         type_5 = '개'
 
     type_name = type_1 + type_2 + type_3 + type_4
-    typefromresult = request.form('typefromresult')
+    # typefromresult = request.form('typefromresult')
+    typefromresult = ''
     if type_name == 'AREI' or typefromresult == 'AREI':
         img_src = '../static/img/매기_움짤.gif'
         type_ex = '괴짜 프로그래머'
