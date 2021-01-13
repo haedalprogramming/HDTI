@@ -6,11 +6,13 @@
 }
 
 .result-all-wrap {
-    width: 300px;
+    width: 280px;
     height: 220px;
+    color: #fff;
+    text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 12px;
     transform: translateX(17%) translateY(85%);
     overflow-y: scroll;
     -ms-overflow-style: none; /* IE and Edge */
@@ -25,6 +27,16 @@
     width: 70px;
     height: 70px;
 }
+
+.types {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.explain {
+    font-size: 10px;
+}
+
 .result-btns {
     position: absolute;
     top: 439px;
