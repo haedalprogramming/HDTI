@@ -46,7 +46,9 @@
     // 유형 자세히 보기
     typesTrigger.forEach( elem => {
         elem.addEventListener('click', function(e) {
+            <!-- e.preventDefault(); -->
             typeInput.value = types[e.target.id].innerText;
+            console.log(typeInput.value);
         });
     });
 {% endblock %}
