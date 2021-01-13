@@ -8,8 +8,8 @@
     <div class="result-wrap">
         <div class="result">
             <img class="result__character" src={{ img }} alt="캐릭터">
-            <p class="result__title">{{ type }}</p>
-            <p class="result__content">{{ type_ex }}</p>
+            <p class="result__title">{{ type_ex }}</p>
+            <p class="result__content">{{ type }}</p>
         </div>
         <div class="result-detail" style="display: none;">
             <p class="result-detail__title">이 사람은...</p>
@@ -51,6 +51,7 @@
     const haedalCharacter = document.querySelector('#haedalCharacter');
     const detailBtn = document.querySelector('#btn1');
     const shareBtn = document.querySelector('#btn4');
+    const okBtn = document.querySelector('#okBtn');
     const backBtn = document.querySelector('#backBtn');
     const resultPage = document.querySelector('.result');
     const resultDetailPage = document.querySelector('.result-detail');
@@ -69,6 +70,19 @@
             isClicked = false;
         } else {
             resultOption1Btn.innerText = '1.자세히보기';
+            resultPage.style.display = 'block';
+            resultDetailPage.style.display = 'none'; 
+            isClicked = true;
+        }
+        
+    });
+
+    okBtn.addEventListener('click', function() {
+        if(isClicked) {
+            resultPage.style.display = 'none';
+            resultDetailPage.style.display = 'block'; 
+            isClicked = false;
+        } else {
             resultPage.style.display = 'block';
             resultDetailPage.style.display = 'none'; 
             isClicked = true;
