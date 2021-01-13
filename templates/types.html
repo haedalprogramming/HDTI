@@ -9,16 +9,17 @@
     <p class="result-title">다른 개발자들의 유형은?</p>
     <form method="POST" action="/result">
         <div class="result-all-wrap">
-            <input type="text" id="typeInput" name="typeInput" hidden>
+            <input type="text" id="answersInput" name="answersInput" hidden>
             {% for i in range (16) %}
             <button class="type-btn">
                 <div class="types">
-                    <div class="type" id={{i}} >{{typeslist[i]}}</div>
-                    <div class="explain" id={{i}}>{{explainlist[i]|safe}}</div>
+                    <div class="type" id="{{i}}">{{typeslist[i]}}</div>
+                    <div class="explain" id="{{i}}">{{explainlist[i]|safe}}</div>
                 </div>
             </button>
             {% endfor %}
         </div>
+
     </form>
     <div class="result-btns">
         <img id="upBtn" class="result-btn up-btn" src="../static/img/윗쪽화살표_빨강.svg" alt="버튼">
@@ -26,7 +27,7 @@
         <img id="downBtn" class="result-btn down-btn" src="../static/img/아래쪽화살표_빨강.svg" alt="버튼">
         <img id="leftBtn" class="result-btn left-btn" src="../static/img/왼쪽화살표_빨강.svg" alt="버튼">
         <img id="okBtn" class="result-btn ok-btn" src="../static/img/OK.svg" alt="버튼">
-        <a href="../result"><img id="backBtn" class="result-btn back-btn" src="../static/img/왼쪽화살표_파랑.svg" alt="버튼"></a>
+        <a href="javascript:history.back();"><img id="backBtn" class="result-btn back-btn" src="../static/img/왼쪽화살표_파랑.svg" alt="버튼"></a>
     </div>
 {% endblock %}
 
@@ -34,7 +35,7 @@
     const chargerBox = document.querySelector('.charger-wrap');
     const typesTrigger = document.querySelectorAll('.types');
     const types = document.querySelectorAll('.type');
-    let typeInput = document.querySelector('#typeInput');
+    let answersInput = document.querySelector('#answersInput');
 
     // 문항 수 표시
     for (let i=0; i<28; i++) {
@@ -46,7 +47,9 @@
     // 유형 자세히 보기
     typesTrigger.forEach( elem => {
         elem.addEventListener('click', function(e) {
-            typeInput.value = types[e.target.id].innerText;
+            // e.preventDefault();
+            answersInput.value = types[e.target.id].innerText;
         });
     });
+
 {% endblock %}
