@@ -5,15 +5,18 @@
 {% block content %}
     <div class="charger-wrap">
     </div>
-    <img class="hdti-title__info" src="../static/img/haedal_title.svg" alt="title">
+    <img class="result-title__info" src="../static/img/haedal_title.svg" alt="title">
     <p class="result-title">다른 개발자들의 유형은?</p>
-    <form action="POST">
+    <form method="POST" action="/result">
         <div class="result-all-wrap">
+            <input type="text" id="typeInput" name="typeInput" hidden>
             {% for i in range (16) %}
-            <div class="types" onclick="location.href='../result';">
-                <div class="type">{{typeslist[i]}}</div>
-                <div class="explain">{{explainlist[i]|safe}}</div>
-            </div>
+            <button class="type-btn">
+                <div class="types">
+                    <div class="type" id={{i}} >{{typeslist[i]}}</div>
+                    <div class="explain" id={{i}}>{{explainlist[i]|safe}}</div>
+                </div>
+            </button>
             {% endfor %}
         </div>
     </form>
@@ -29,6 +32,9 @@
 
 {% block script %}
     const chargerBox = document.querySelector('.charger-wrap');
+    const typesTrigger = document.querySelectorAll('.types');
+    const types = document.querySelectorAll('.type');
+    let typeInput = document.querySelector('#typeInput');
 
     // 문항 수 표시
     for (let i=0; i<28; i++) {
@@ -36,4 +42,11 @@
         charger.classList.add('charger');
         chargerBox.appendChild(charger);
     }
+
+    // 유형 자세히 보기
+    typesTrigger.forEach( elem => {
+        elem.addEventListener('click', function(e) {
+            typeInput.value = types[e.target.id].innerText;
+        });
+    });
 {% endblock %}

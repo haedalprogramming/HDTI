@@ -1,6 +1,13 @@
+.result-title__info {
+    position: absolute;
+    top: 81.7px;
+    left: 110px;
+    width: 140px;
+}
+
 .result-title {
     position: absolute;
-    top: 129px;
+    top: 110px;
     left: 90px;
     color: #fff;
 }
@@ -13,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 12px;
-    transform: translateX(17%) translateY(85%);
+    transform: translateX(17%) translateY(77%);
     overflow-y: scroll;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -23,11 +30,6 @@
     display: none; /* Chrome, Safari, Opera*/
 }
 
-.thumnail {
-    width: 70px;
-    height: 70px;
-}
-
 .types {
     font-size: 15px;
     cursor: pointer;
@@ -35,6 +37,14 @@
 
 .explain {
     font-size: 10px;
+}
+
+.type-btn {
+    padding: 0;
+    color: #fff;
+    font-family: 'NEODGM';
+    border: none;
+    background: transparent;
 }
 
 .result-btns {
