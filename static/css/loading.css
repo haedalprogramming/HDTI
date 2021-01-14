@@ -12,6 +12,16 @@
     width: 140px;
 }
 
+.hdti-etc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    margin-top: 190px;
+    color: #fff;
+}
+
 .hdti-click {
     position: absolute;
     top: 230px;
@@ -20,17 +30,14 @@
 }
 
 .hdti-red {
-    position: absolute;
-    top: 284px;
-    left: 150px;
-    width: 59px;
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 23px;
+    color: red;
 }
 
 .hdti-rights {
-    position: absolute;
-    top: 309px;
-    left: 75px;
-    width: 210px;
+    margin: 0;
 }
 
 .hdti-joystick {
