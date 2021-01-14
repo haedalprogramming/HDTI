@@ -88,29 +88,6 @@
     const questions = questionsArray.slice(10);
     let questions_idx = 0;
 
-    function setBlur() {
-        const hdtiBg = document.querySelector('.hdti-bg');
-        // const haedalTalkBubble = document.querySelector('.haedal-talk__bubble');
-        const tutorial = document.createElement('div');
-        tutorial.classList.add('tutorial');
-        faces[0].classList.add('text-blur');
-        faces[1].classList.add('text-blur');
-        faces[2].classList.add('text-blur');
-        faces[8].classList.add('text-blur');
-        faces[9].classList.add('text-blur');
-        hdtiBg.appendChild(tutorial);
-    };
-
-    function removeBlur() {
-        const tutorial = document.querySelector('.tutorial');
-        tutorial.classList.remove('tutorial');
-        faces[0].classList.remove('text-blur');
-        faces[1].classList.remove('text-blur');
-        faces[2].classList.remove('text-blur');
-        faces[8].classList.remove('text-blur');
-        faces[9].classList.remove('text-blur');
-    };
-
     function rotateFace() {
         for(let i=0; i < faces.length; i++){
             indices[i] += 36;
@@ -168,37 +145,16 @@
         faces[2].style.background = 'rgba(255, 255, 255, 0.17)';
     }
 
-    // 튜토리얼 배경
-    setBlur();
-
-    // 튜토리얼
-    haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">1번: 매우 그렇다.</p>
-                            <p class="haedal-talk__tutorial">2번: 조금 그렇다.</p>
-                            <p class="haedal-talk__tutorial">3번: 조금 아니다.</p>
-                            <p class="haedal-talk__tutorial">4번: 매우 아니다.</p>`        
-    haedalTalk.style.display = 'flex';
-    haedalTalk.style.flexDirection = 'column';
-    haedalTalk.style.justifyContent = 'center';
-    haedalTalk.style.alignItems = 'center';
-
-    console.log('questionsArray',questionsArray)
-
     setTimeout(() => {
-        // 블러 없애기
-        removeBlur();
-        // 튜토리얼 없애기
-        haedalTalk.style.display = 'none';
         // 핑그르르르
         for(let i=0; i < faces.length; i++){
             indices[i] = indices[i] + 360 * 4;
             faces[i].style.transform = 'rotateX(' + indices[i] + 'deg) translateZ(140px)';
             faces[i].style.transition = '1.3s';
             faces[i].style.transitionTimingFunction = 'ease-in-out';
-            faces[i].style.delay = '.2s';
         }
-    }, 3000);
+    }, 1);
 
-    // 핑그르르 1.3초 동안 진행되므로 4300 후에 버튼 이벤트 붙임
     setTimeout(() => {
         // 버튼 이벤트리스너
         btns.addEventListener('click', function(e) {
@@ -209,7 +165,6 @@
                     haedalTalk.style.display = 'none';
                     answersInput.value = answers;
                 } else {
-                    e.preventDefault();
                     let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
                     haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
                     
@@ -251,7 +206,7 @@
                 }
             }
         });
-    }, 4300);    
+    }, 1300);    
 {% endblock %}
 </body>
 </html>

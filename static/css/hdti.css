@@ -6,10 +6,6 @@
   transform: translateX(12%) translateY(-86%);
 }
 
-.text-blur {
-  filter: blur(3px);
-}
-
 .cube-wrap {
   position: relative;
   width: 80%;
@@ -20,13 +16,13 @@
 
 .hdti-tutorial{
   display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 7px;
-    position: absolute;
-    bottom: 4px;
-    color: #00ff4c;
-    font-size: 10px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 7px;
+  position: absolute;
+  bottom: 4px;
+  color: #00ff4c;
+  font-size: 10px;
 }
 
 .cube {
@@ -73,13 +69,6 @@
   text-align: center;
   word-break: keep-all;
   line-height: 1.5;
-}
-
-.haedal-talk p.haedal-talk__tutorial {
-  margin: 0;
-  font-family: 'NEODGM';
-  font-weight: bold;
-  line-height: 1.3;
 }
 
 .haedal-talk__bubble {
