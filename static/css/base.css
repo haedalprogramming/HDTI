@@ -1,6 +1,8 @@
 @font-face { 
     font-family: 'NEODGM'; 
-    src: url('./NEODGM.ttf') format('truetype'); 
+    src: url('./NEODGM.ttf') format('truetype'),
+    url('./NEODGM.ttf') format('opentype'),
+    url('./neodgm_pro.woff') format('woff'); 
 }
 
 * { 
@@ -15,7 +17,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'NEODGM';
-    background: #3b3b3b;
+    background: #3d3d3d;
 }
 
 .hdti-bg {
