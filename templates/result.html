@@ -28,10 +28,10 @@
         <img src="../static/img/type_desc.svg" alt="type">
     </div>
     <div class="btns">
-        <img id="btn1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
-        <a href="../types"><img id="2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼"></a>
-        <a href="../hdti"><img id="3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼"></a>
-        <img id="btn4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
+        <img id="btn1" class="answer-btn1" src="../static/img/버튼_ok.svg" alt="버튼"><span id="btnText1" class="answer-btn1__text">1</span>
+        <a href="../types"><img id="2" class="answer-btn2" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn2__text">2</span></a>
+        <a href="../hdti"><img id="3" class="answer-btn3" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn3__text">3</span></a>
+        <img id="btn4" class="answer-btn4" src="../static/img/버튼_ok.svg" alt="버튼"><span id="btnText4" class="answer-btn4__text">4</span>
         <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
     </div>
     <div class="share-btns" style="display: none;">
@@ -50,7 +50,9 @@
     const haedalTypeTalk = document.querySelector('#haedalTypeTalk');
     const haedalCharacter = document.querySelector('#haedalCharacter');
     const detailBtn = document.querySelector('#btn1');
+    const btnText1 = document.querySelector('#btnText1');
     const shareBtn = document.querySelector('#btn4');
+    const btnText4 = document.querySelector('#btnText4');
     const okBtn = document.querySelector('#okBtn');
     const backBtn = document.querySelector('#backBtn');
     const resultPage = document.querySelector('.result');
@@ -64,6 +66,21 @@
     let isTypeClicked = false;
 
     detailBtn.addEventListener('click', function() {
+        if(isClicked) {
+            resultOption1Btn.innerText = '1.돌아가기';
+            resultPage.style.display = 'none';
+            resultDetailPage.style.display = 'block'; 
+            isClicked = false;
+        } else {
+            resultOption1Btn.innerText = '1.자세히보기';
+            resultPage.style.display = 'block';
+            resultDetailPage.style.display = 'none'; 
+            isClicked = true;
+        }
+        
+    });
+
+    btnText1.addEventListener('click', function() {
         if(isClicked) {
             resultOption1Btn.innerText = '1.돌아가기';
             resultPage.style.display = 'none';
@@ -102,6 +119,12 @@
     });
 
     shareBtn.addEventListener('click', function() {
+        resultOptionPage.style.display = 'none';
+        btns.style.display = 'none';
+        shareBtns.style.display = 'block';
+    });
+
+    btnText4.addEventListener('click', function() {
         resultOptionPage.style.display = 'none';
         btns.style.display = 'none';
         shareBtns.style.display = 'block';

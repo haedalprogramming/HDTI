@@ -43,3 +43,28 @@ body {
     margin: 1px;
     background: #00ff4c;
 }
+
+@media screen and (max-width: 370px) {
+    .hdti-bg {
+        width: 98vw;
+    }
+    .charger-wrap {
+        position: absolute;
+        top: 15.5px !important;
+        left: 18px !important;;
+        width: 92% !important;;
+        height: 22px;
+    }
+    .charger {
+        width: 9px !important;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .hdti-bg {
+        height: 98vh;
+    }
+    .hdti-tutorial {
+        bottom: 9px !important;
+    }
+}

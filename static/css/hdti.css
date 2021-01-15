@@ -110,7 +110,8 @@ button:focus {
   top: 18px;
   left: 50px;
   color: #fff;
-  font-size: 200%;
+  font-size: 177%;
+  cursor: pointer;
 }
 
 .answer-btn2 {
@@ -123,10 +124,11 @@ button:focus {
 
 .answer-btn2__text {
   position: absolute;
-  top: 60px;
-  left: 115px;
+  top: 62px;
+  left: 116px;
   color: #fff;
-  font-size: 200%;
+  font-size: 177%;
+  cursor: pointer;
 }
 
 .answer-btn3 {
@@ -139,10 +141,11 @@ button:focus {
 
 .answer-btn3__text {
   position: absolute;
-  top: 60px;
-  left: 236px;
+  top: 62px;
+  left: 238px;
   color: #fff;
-  font-size: 200%;
+  font-size: 177%;
+  cursor: pointer;
 }
 
 .answer-btn4 {
@@ -158,7 +161,8 @@ button:focus {
   top: 18px;
   left: 294px;
   color: #fff;
-  font-size: 200%;
+  font-size: 177%;
+  cursor: pointer;
 }
 
 .haedal-btn {
