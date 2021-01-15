@@ -5,8 +5,6 @@
     <img class="hdti-title" src="../static/img/haedal_title.svg" alt="title">
     <div class="hdti-etc">
         <img class="hdti-click" src="../static/img/CLICK_JOYSTICK.gif" alt="click-joystick">
-        <!-- <img  src="../static/img/haedal_red.svg" alt="title">
-        <img  src="../static/img/haedal_rights.svg" alt="title"> -->
         <p class="hdti-red">HAEDAL</p>
         <P class="hdti-rights">© 2020. HAEDAL PROGRAMMING</P>
         <p class="hdti-rights">all rights reserved.</p>
@@ -46,6 +44,7 @@
             setTimeout(function() {
                 hdtiTitle.classList.remove('hdti-title');
                 hdtiTitle.classList.add('hdti-title__info');
+                clickComment.classList.add('hdti-etc__comment');
                 clickComment.innerHTML = infoComment.innerHTML;
             }, 700);
 
