@@ -19,10 +19,10 @@
     <form method="POST" action="/result">
         <input type="text" id="answersInput" name="answersInput" hidden>
         <div class="btns">
-            <img id="1" class="answer-btn1" src="../static/img/btn1.svg" alt="버튼">
-            <img id="2" class="answer-btn2" src="../static/img/btn2.svg" alt="버튼">
-            <img id="3" class="answer-btn3" src="../static/img/btn3.svg" alt="버튼">
-            <img id="4" class="answer-btn4" src="../static/img/btn4.svg" alt="버튼">
+            <img id="1" class="answer-btn1" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn1__text">1</span>
+            <img id="2" class="answer-btn2" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn2__text">2</span>
+            <img id="3" class="answer-btn3" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn3__text">3</span>
+            <img id="4" class="answer-btn4" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn4__text">4</span>
             <button class="haedal-btn" disabled><img id="haedalCharacter" src="../static/img/btn_haedal.svg" alt="버튼"></button>
         </div>
     </form>
@@ -41,6 +41,7 @@
 
     const faces = document.querySelectorAll('.cube__face');
     const haedalTalk = document.querySelector('#haedalTalk');
+    const haedalTalkBubble = document.querySelector('.haedal-talk__bubble');
     const answersInput = document.querySelector('#answersInput');
     const btns = document.querySelector('.btns');
     const haedalBtn = document.querySelector('.haedal-btn');
@@ -163,11 +164,14 @@
                 if(answers.length == 28) {
                     haedalBtn.disabled = false;
                     haedalTalk.style.display = 'none';
+                    haedalTalkBubble.style.display = 'none';
                     answersInput.value = answers;
                 } else {
                     let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
                     haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
                     
+                    haedalTalkBubble.style.display = 'block';
+                    haedalTalk.appendChild(haedalTalkBubble);
                     haedalTalk.style.display = 'flex';
                     haedalTalk.style.justifyContent = 'center';
                     haedalTalk.style.alignItems = 'center';
@@ -175,6 +179,7 @@
             } else {
                 //해달이 말풍선 없애기
                 haedalTalk.style.display = 'none';
+                haedalTalkBubble.style.display = 'none';
 
                 clickCnt += 1;
                 

@@ -77,7 +77,7 @@
 
 .haedal-talk__bubble {
   position: absolute;
-  bottom: -200px;
+  bottom: -18px;
   left: 71px;
   width: 0px;
   height: 0px;
@@ -105,12 +105,28 @@ button:focus {
   cursor: pointer;
 }
 
+.answer-btn1__text {
+  position: absolute;
+  top: 18px;
+  left: 50px;
+  color: #fff;
+  font-size: 200%;
+}
+
 .answer-btn2 {
   position: absolute;
   top: 50px;
   left: 95px;
   width: 60px;
   cursor: pointer;
+}
+
+.answer-btn2__text {
+  position: absolute;
+  top: 60px;
+  left: 115px;
+  color: #fff;
+  font-size: 200%;
 }
 
 .answer-btn3 {
@@ -121,12 +137,28 @@ button:focus {
   cursor: pointer;
 }
 
+.answer-btn3__text {
+  position: absolute;
+  top: 60px;
+  left: 236px;
+  color: #fff;
+  font-size: 200%;
+}
+
 .answer-btn4 {
   position: absolute;
   top: 7px;
   left: 273px;
   width: 60px;
   cursor: pointer;
+}
+
+.answer-btn4__text {
+  position: absolute;
+  top: 18px;
+  left: 294px;
+  color: #fff;
+  font-size: 200%;
 }
 
 .haedal-btn {
