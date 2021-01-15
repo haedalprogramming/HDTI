@@ -11,10 +11,10 @@
         <div class="result-all-wrap">
             <input type="text" id="answersInput" name="answersInput" hidden>
             {% for i in range (16) %}
-            <button class="type-btn">
+            <button class="type-btn" disabled>
                 <div class="types">
-                    <div class="type" id="{{i}}">{{typeslist[i]}}</div>
-                    <div class="explain" id="{{i}}">{{explainlist[i]|safe}}</div>
+                    <div class="type">{{typeslist[i]}}</div>
+                    <div class="explain">{{explainlist[i]|safe}}</div>
                 </div>
             </button>
             {% endfor %}
@@ -33,8 +33,14 @@
 
 {% block script %}
     const chargerBox = document.querySelector('.charger-wrap');
-    const typesTrigger = document.querySelectorAll('.types');
     const types = document.querySelectorAll('.type');
+    const typesBtn = document.querySelectorAll('.type-btn');
+    const upBtn = document.querySelector('#upBtn');
+    const rightBtn = document.querySelector('#rightBtn');
+    const downBtn = document.querySelector('#downBtn');
+    const leftBtn = document.querySelector('#leftBtn');
+    const okBtn = document.querySelector('#okBtn');
+    let focusIdx = 0;
     let answersInput = document.querySelector('#answersInput');
 
     // 문항 수 표시
@@ -44,11 +50,65 @@
         chargerBox.appendChild(charger);
     }
 
-    // 유형 자세히 보기
-    typesTrigger.forEach( elem => {
-        elem.addEventListener('click', function(e) {
-            answersInput.value = types[e.target.id].innerText;
-        });
+    // type focus
+    typesBtn[0].classList.add('type-focus');
+    typesBtn[0].disabled = false;
+    answersInput.value = types[0].innerText;
+
+    upBtn.addEventListener('click', function() { 
+        typesBtn[focusIdx].classList.remove('type-focus');
+        typesBtn[focusIdx].disabled = true;
+        if (focusIdx < 4) {
+            focusIdx += 12;
+        } else {
+            focusIdx -= 4;
+        }
+        typesBtn[focusIdx].classList.add('type-focus');
+        typesBtn[focusIdx].disabled = false;
+        answersInput.value = types[focusIdx].innerText;
+    });
+
+    rightBtn.addEventListener('click', function() {
+        typesBtn[focusIdx].classList.remove('type-focus');
+        typesBtn[focusIdx].disabled = true;
+        if (focusIdx == 15) {
+            focusIdx = 0;
+        } else {
+            focusIdx += 1;
+        }
+        typesBtn[focusIdx].classList.add('type-focus');
+        typesBtn[focusIdx].disabled = false;
+        answersInput.value = types[focusIdx].innerText;
+    });
+
+    downBtn.addEventListener('click', function() {
+        typesBtn[focusIdx].classList.remove('type-focus');
+        typesBtn[focusIdx].disabled = true;
+        if (focusIdx > 11) {
+            focusIdx -= 12;
+        } else {
+            focusIdx += 4;
+        }
+        typesBtn[focusIdx].classList.add('type-focus');
+        typesBtn[focusIdx].disabled = false;
+        answersInput.value = types[focusIdx].innerText;
+    });
+
+    leftBtn.addEventListener('click', function() {
+        typesBtn[focusIdx].classList.remove('type-focus');
+        typesBtn[focusIdx].disabled = true;
+        if (focusIdx == 0) {
+            focusIdx = 15;
+        } else {
+            focusIdx -= 1;
+        }
+        typesBtn[focusIdx].classList.add('type-focus');
+        typesBtn[focusIdx].disabled = false;
+        answersInput.value = types[focusIdx].innerText;
+    });
+
+    okBtn.addEventListener('click', function() {
+        typesBtn[focusIdx].click();
     });
 
 {% endblock %}

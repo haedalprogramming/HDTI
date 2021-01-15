@@ -19,7 +19,8 @@
     text-align: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 10px;
+    row-gap: 8px;
+    column-gap: 5px;
     transform: translateX(17%) translateY(77%);
     overflow-y: scroll;
     -ms-overflow-style: none; /* IE and Edge */
@@ -37,7 +38,7 @@
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    font-size: 17px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -51,11 +52,15 @@
 
 .type-btn {
     padding: 0;
+    padding-bottom: 9px;
     font-family: 'NEODGM';
-    /* border: 1px solid #a2a2a2; */
     border: none;
-    /* border-top: 1px solid #a2a2a2; */
     background: transparent;
+}
+
+.type-focus {
+    border: 1px solid #00ff4c;
+    transition: .2s;
 }
 
 .result-btns {
