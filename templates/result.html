@@ -58,6 +58,7 @@
     const resultOptionPage = document.querySelector('.result-option');
     const resultOption1Btn = document.querySelector('#resultOption1');
     const resultOption4Btn = document.querySelector('#resultOption4');
+    const kakaoBtn = document.querySelector('#kakaoBtn');
     
     let isClicked = true;
     let isTypeClicked = false;
@@ -120,4 +121,21 @@
         charger.classList.add('charger');
         chargerBox.appendChild(charger);
     }
+
+    kakaoBtn.addEventListener('click', function() {
+        // kakao 공유
+        Kakao.init('c076ef382754c7143f26cec687f7d4d5');
+        Kakao.Link.sendDefault({
+            objectType: 'feed',
+            content: {
+                title: '해달 MBTI',
+                description: '해달 개발자용 MBTI 검사입니다. 재미로 즐겨 주세요 :)!!!',
+                imageUrl: '../static/opengraph.png',
+                link: {
+                    webUrl: 'http://59.24.250.48',
+                    mobileWebUrl: 'http://59.24.250.48',
+                },
+            },
+        });
+    });
 {% endblock %}
