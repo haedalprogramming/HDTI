@@ -189,7 +189,7 @@
                     charger.classList.add('charger');
                     chargerBox.appendChild(charger);
     
-                    answers.push(e.target.id);
+                    answers.push(e.target.id ? e.target.id : e.target.innerText);
 
                     if (answers.length == 28) {
                         haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">저를 눌러주세요!</p>`        
