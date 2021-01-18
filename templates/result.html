@@ -42,6 +42,7 @@
         <img id="okBtn" class="share-btn ok-btn" src="../static/img/버튼_ok.svg" alt="버튼">
         <img id="backBtn" class="share-btn back-btn" src="../static/img/버튼_왼쪽 화살표.svg" alt="버튼">
     </div>
+    <input type="text" value="http://59.24.250.48" id="urlAddress" style="display:none;">
 {% endblock %}
 
 {% block script %}
@@ -61,8 +62,6 @@
     const resultOption1Btn = document.querySelector('#resultOption1');
     const resultOption4Btn = document.querySelector('#resultOption4');
     const kakaoBtn = document.querySelector('#kakaoBtn');
-    const twitterBtn = document.querySelector('#twitterBtn');
-    const facebookBtn = document.querySelector('#facebookBtn');
     const urlBtn = document.querySelector('#urlBtn');
     
     let isClicked = true;
@@ -165,7 +164,15 @@
         });
     });
 
+    urlBtn.addEventListener('click', function() {
+        const urlAddress = document.querySelector('#urlAddress');
 
-        // twitter 공유
-
+        urlAddress.style.display = 'block';
+        urlAddress.select();
+        // safari
+        urlAddress.setSelectionRange(0, 100);
+        document.execCommand("Copy");
+        urlAddress.style.display = 'none';
+        alert('URL 주소가 복사 되었습니다');
+    });
 {% endblock %}
