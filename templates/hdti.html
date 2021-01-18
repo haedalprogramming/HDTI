@@ -192,7 +192,9 @@
                     answers.push(e.target.id ? e.target.id : e.target.innerText);
 
                     if (answers.length == 28) {
-                        haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">저를 눌러주세요!</p>`        
+                        haedalTalk.innerHTML = `<p class="haedal-talk__tutorial">저를 눌러주세요!</p>`     
+                        haedalTalkBubble.style.display = 'block';
+                        haedalTalk.appendChild(haedalTalkBubble);   
                         haedalTalk.style.display = 'flex';
                         haedalTalk.style.flexDirection = 'column';
                         haedalTalk.style.justifyContent = 'center';
