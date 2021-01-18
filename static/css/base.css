@@ -59,3 +59,15 @@ body {
         width: 9px !important;
     }
 }
+
+@media screen and (max-height: 640px) {
+    .hdti-bg {
+        height: 98vh;
+    }
+    .hdti-tutorial {
+        bottom: 9px !important;
+    }
+    .charger {
+        margin: 0 1px !important;
+    }
+}
