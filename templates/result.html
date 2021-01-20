@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="../static/css/types.css">
     <link rel="stylesheet" href="../static/css/share.css">
     <meta property="og:type"               content="website" />
-    <meta property="og:title"              content={{ type_ex }} />
-    <meta property="og:description"        content={{ explanation }} />
+    <meta property="og:title"              content=`{{ type_ex }}` />
+    <meta property="og:description"        content=`{{ explanation }}` />
     <meta property="og:url"                content=`http://hdti.haedal.io/result?answersInput={{ type }}` />
-    <meta property="og:image"              content={{ img_og }} />
+    <meta property="og:image"              content=`{{ img_og }}` />
 
     <script src="https://drevelopes.kakao.com/sdk/js/kakao.js"></script>
 
@@ -61,7 +61,7 @@
             <img id="okBtn" class="share-btn ok-btn" src="../static/img/버튼_ok.svg" alt="버튼">
             <img id="backBtn" class="share-btn back-btn" src="../static/img/버튼_왼쪽 화살표.svg" alt="버튼">
         </div>
-        <input type="text" value="http://hdti.haedal.io/result?answersInput="+{{ type }} id="urlAddress" style="display:none;">
+        <input type="text" value=`http://hdti.haedal.io/result?answersInput={{ type }}` id="urlAddress" style="display:none;">
     </div>
     <script>
 
