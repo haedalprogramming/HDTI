@@ -7,7 +7,7 @@
     </div>
     <img class="result-title__info" src="../static/img/haedal_title.svg" alt="title">
     <p class="result-title">다른 개발자들의 유형은?</p>
-    <form method="POST" action="/result">
+    <form method="GET" action="/result">
         <div class="result-all-wrap">
             <input type="text" id="answersInput" name="answersInput" hidden>
             {% for i in range (16) %}
