@@ -53,14 +53,14 @@
             <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
         </div>
         <div class="share-btns" style="display: none;">
-            <img id="twitterBtn"  class="share-btn up-btn"    onclick="window.open('https://twitter.com/intent/tweet?text=HDTI&url=http://hdti.haedal.io/result?answersInput='+{{type_ex}},'window_name','width=430,height=500,location=no,status=no,scrollbars=yes');" src="../static/img/트위터.svg" alt="버튼">
-            <img id="facebookBtn" class="share-btn right-btn" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=http://hdti.haedal.io/result?answersInput='+{{type_ex}},'window_name','width=430,height=500,location=no,status=no,scrollbars=yes');"    src="../static/img/페이스북.svg" alt="버튼">
+            <img id="twitterBtn"  class="share-btn up-btn"    onclick="window.open('https://twitter.com/intent/tweet?text=HDTI&url=http://hdti.haedal.io/result?answersInput='+{{ type }},'window_name','width=430,height=500,location=no,status=no,scrollbars=yes');" src="../static/img/트위터.svg" alt="버튼">
+            <img id="facebookBtn" class="share-btn right-btn" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=http://hdti.haedal.io/result?answersInput='+{{ type }},'window_name','width=430,height=500,location=no,status=no,scrollbars=yes');"    src="../static/img/페이스북.svg" alt="버튼">
             <img id="urlBtn" class="share-btn down-btn" src="../static/img/url.svg" alt="버튼">
             <img id="kakaoBtn" class="share-btn left-btn" src="../static/img/카카오톡.svg" alt="버튼">
             <img id="okBtn" class="share-btn ok-btn" src="../static/img/버튼_ok.svg" alt="버튼">
             <img id="backBtn" class="share-btn back-btn" src="../static/img/버튼_왼쪽 화살표.svg" alt="버튼">
         </div>
-        <input type="text" value="http://hdti.haedal.io/result?answersInput="+{{type_ex}} id="urlAddress" style="display:none;">
+        <input type="text" value="http://hdti.haedal.io/result?answersInput="+{{ type }} id="urlAddress" style="display:none;">
     </div>
     <script>
 
