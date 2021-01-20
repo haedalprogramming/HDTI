@@ -1,51 +1,69 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>해달 MBTI 결과</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/loading.css">
+    <link rel="stylesheet" href="../static/css/hdti.css">
+    <link rel="stylesheet" href="../static/css/result.css">
+    <link rel="stylesheet" href="../static/css/types.css">
+    <link rel="stylesheet" href="../static/css/share.css">
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content={{ type_ex }} />
+    <meta property="og:description"        content={{ explanation }} />
+    <meta property="og:image"              content={{ img }} />
+    <meta property="og:url"                content="http://hdti.haedal.io" />
+    <script src="https://drevelopes.kakao.com/sdk/js/kakao.js"></script>
 
-{% block title %} 해달 MBTI 결과 {% endblock %}
+</head>
+<body>
+    <div class="hdti-bg">
+        <div class="charger-wrap">
+        </div>
+        <div class="result-wrap">
+            <div class="result">
+                <img class="result__character" src={{ img }} alt="캐릭터">
+                <p class="result__title">{{ type_ex }}</p>
+                <p class="result__content">{{ type }}</p>
+            </div>
+            <div class="result-detail" style="display: none;">
+                <p class="result-detail__title">이 사람은...</p>
+                <p class="result-detail__content">
+                    {{ explanation }}
+                </p>
+            </div>
+            <div class="result-option">
+                <p id="resultOption1">1. 자세히보기</p>
+                <p>2. 전체유형</p>
+                <p>3. 다시하기</p>
+                <p>4. 공유하기</p>
+            </div>
+        </div>
+        <div id="haedalTypeTalk" class="haedal-type-talk">
+            <img src="../static/img/type_desc.svg" alt="type">
+        </div>
+        <div class="btns">
+            <img id="btn1" class="answer-btn1" src="../static/img/버튼_ok.svg" alt="버튼"><span id="btnText1" class="answer-btn1__text">1</span>
+            <a href="../types"><img id="2" class="answer-btn2" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn2__text">2</span></a>
+            <a href="../hdti"><img id="3" class="answer-btn3" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn3__text">3</span></a>
+            <img id="btn4" class="answer-btn4" src="../static/img/버튼_ok.svg" alt="버튼"><span id="btnText4" class="answer-btn4__text">4</span>
+            <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
+        </div>
+        <div class="share-btns" style="display: none;">
+            <img id="twitterBtn"  class="share-btn up-btn"    onclick="window.open('https://twitter.com/intent/tweet?text=HDTI&url=http://hdti.haedal.io','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');" src="../static/img/트위터.svg" alt="버튼">
+            <img id="facebookBtn" class="share-btn right-btn" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=http://hdti.haedal.io','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');"    src="../static/img/페이스북.svg" alt="버튼">
+            <img id="urlBtn" class="share-btn down-btn" src="../static/img/url.svg" alt="버튼">
+            <img id="kakaoBtn" class="share-btn left-btn" src="../static/img/카카오톡.svg" alt="버튼">
+            <img id="okBtn" class="share-btn ok-btn" src="../static/img/버튼_ok.svg" alt="버튼">
+            <img id="backBtn" class="share-btn back-btn" src="../static/img/버튼_왼쪽 화살표.svg" alt="버튼">
+        </div>
+        <input type="text" value="http://hdti.haedal.io" id="urlAddress" style="display:none;">
+    </div>
+    <script>
 
-{% block content %}
-    <div class="charger-wrap">
-    </div>
-    <div class="result-wrap">
-        <div class="result">
-            <img class="result__character" src={{ img }} alt="캐릭터">
-            <p class="result__title">{{ type_ex }}</p>
-            <p class="result__content">{{ type }}</p>
-        </div>
-        <div class="result-detail" style="display: none;">
-            <p class="result-detail__title">이 사람은...</p>
-            <p class="result-detail__content">
-                {{ explanation }}
-            </p>
-        </div>
-        <div class="result-option">
-            <p id="resultOption1">1. 자세히보기</p>
-            <p>2. 전체유형</p>
-            <p>3. 다시하기</p>
-            <p>4. 공유하기</p>
-        </div>
-    </div>
-    <div id="haedalTypeTalk" class="haedal-type-talk">
-        <img src="../static/img/type_desc.svg" alt="type">
-    </div>
-    <div class="btns">
-        <img id="btn1" class="answer-btn1" src="../static/img/버튼_ok.svg" alt="버튼"><span id="btnText1" class="answer-btn1__text">1</span>
-        <a href="../types"><img id="2" class="answer-btn2" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn2__text">2</span></a>
-        <a href="../hdti"><img id="3" class="answer-btn3" src="../static/img/버튼_ok.svg" alt="버튼"><span class="answer-btn3__text">3</span></a>
-        <img id="btn4" class="answer-btn4" src="../static/img/버튼_ok.svg" alt="버튼"><span id="btnText4" class="answer-btn4__text">4</span>
-        <img id="haedalCharacter" class="haedal-btn" src="../static/img/btn_haedal.svg" alt="버튼"></button>
-    </div>
-    <div class="share-btns" style="display: none;">
-        <img id="twitterBtn"  class="share-btn up-btn"    onclick="window.open('https://twitter.com/intent/tweet?text=HDTI&url=http://hdti.haedal.io','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');" src="../static/img/트위터.svg" alt="버튼">
-        <img id="facebookBtn" class="share-btn right-btn" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=http://hdti.haedal.io','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');"    src="../static/img/페이스북.svg" alt="버튼">
-        <img id="urlBtn" class="share-btn down-btn" src="../static/img/url.svg" alt="버튼">
-        <img id="kakaoBtn" class="share-btn left-btn" src="../static/img/카카오톡.svg" alt="버튼">
-        <img id="okBtn" class="share-btn ok-btn" src="../static/img/버튼_ok.svg" alt="버튼">
-        <img id="backBtn" class="share-btn back-btn" src="../static/img/버튼_왼쪽 화살표.svg" alt="버튼">
-    </div>
-    <input type="text" value="http://hdti.haedal.io" id="urlAddress" style="display:none;">
-{% endblock %}
-
-{% block script %}
     const btns = document.querySelector('.btns');
     const shareBtns = document.querySelector('.share-btns');
     const haedalTypeTalk = document.querySelector('#haedalTypeTalk');
@@ -175,4 +193,6 @@
         urlAddress.style.display = 'none';
         alert('URL 주소가 복사 되었습니다');
     });
-{% endblock %}
+    </script>
+</body>
+</html>
