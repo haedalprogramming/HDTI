@@ -16,8 +16,7 @@
     <meta property="og:description"        content='{{ explanation }}' />
     <meta property="og:url"                content=http://hdti.haedal.io/result?answersInput={{ type }} />
     <meta property="og:image"              content=http://hdti.haedal.io{{ img_og }} />
-
-    <script src="https://drevelopes.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 
 </head>
 <body>
@@ -168,13 +167,11 @@
 
     kakaoBtn.addEventListener('click', function() {
         // kakao 공유
-        console.log('111');
         Kakao.init('2730ddd0a0e8dffa3b04becb563ba575');
-        console.log('222');
         Kakao.Link.sendDefault({
             objectType: 'feed',
             content: {
-                title: '{{ type_ex | }}',
+                title: '{{ type_ex }}',
                 description: '{{ explanation }}',
                 imageUrl: 'http://hdti.haedal.io{{ img_og }}',
                 link: {
