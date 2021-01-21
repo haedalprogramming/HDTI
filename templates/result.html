@@ -172,12 +172,12 @@
         Kakao.Link.sendDefault({
             objectType: 'feed',
             content: {
-                title: '해달 MBTI',
-                description: '해달 개발자용 MBTI 검사입니다. 재미로 즐겨 주세요 :)',
-                imageUrl: 'http://hdti.haedal.io/static/opengraph.png',
+                title: '{{ type_ex }}',
+                description: '{{ explanation }}',
+                imageUrl: 'http://hdti.haedal.io{{ img_og }}',
                 link: {
-                    webUrl: 'http://hdti.haedal.io',
-                    mobileWebUrl: 'http://hdti.haedal.io',
+                    webUrl: 'http://hdti.haedal.io/result?answersInput={{ type }}',
+                    mobileWebUrl: 'http://hdti.haedal.io/result?answersInput={{ type }}',
                 },
             },
         });
