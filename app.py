@@ -13,10 +13,14 @@ def index():
 def hdti():
     return render_template('hdti.html', questions=loadquestion.questions)
 
-@app.route('/result', methods=["GET"])
+@app.route('/result', methods=["GET", "POST"])
 def result():
     result_listname = 'answersInput'
-    result_list = request.args.get(result_listname)
+    if request.method == 'GET':
+        result_list = request.args.get(result_listname)
+    elif request.method == 'POST':
+        result_list = request.form[result_listname]
+
     if result_list[0].isdigit():
         result_list = result_list.split(',')
         score_A = score_T = score_R = score_F = score_E = score_C = score_P = score_I = score_gae = score_gi = 0
