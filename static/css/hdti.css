@@ -177,3 +177,36 @@ button:focus {
 .haedal-btn img {
   width: 72px;
 }
+
+@media screen and (max-width: 370px) {
+  .cube-wrap {
+    position: relative;
+    width: 80%;
+    height: 360px;
+    transform: translateX(12%) translateY(8.5%);
+    overflow: hidden;
+  }
+  
+  .hdti-tutorial{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 7px;
+    position: absolute;
+    bottom: 4px;
+    color: #00ff4c;
+    font-size: 10px;
+  }
+  
+  .haedal-talk {
+    top: 318px;
+  }
+  
+  .haedal-talk__bubble {
+    bottom: -18px;
+  }
+  
+  .btns {
+    top: 429px;
+  }
+}
