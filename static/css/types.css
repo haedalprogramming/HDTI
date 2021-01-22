@@ -116,3 +116,14 @@
     top: 80px;
     left: 230px;
 }
+
+@media screen and (max-width: 370px) {
+    .result-all-wrap {
+        width: 77%;
+        row-gap: 6px;
+    }
+
+    .result-btns {
+        top: 400px;
+    }
+}

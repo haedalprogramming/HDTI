@@ -41,3 +41,9 @@
     top: 80px;
     left: 230px;
 }
+
+@media screen and (max-width: 370px) {
+    .share-btns {
+        top: 400px;
+    }
+}
