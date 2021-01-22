@@ -35,19 +35,19 @@ def result():
         score_gae = int(result_list[22]) + int(result_list[24]) + int(result_list[26])
         score_gi  = int(result_list[23]) + int(result_list[25]) + int(result_list[27])
 
-        if score_A >= score_T:
+        if score_A <= score_T:
             type_1 = 'T'
         else:
             type_1 = 'A'
-        if score_R >= score_F:
+        if score_R <= score_F:
             type_2 = 'F'
         else:
             type_2 = 'R'
-        if score_E >= score_C:
+        if score_E <= score_C:
             type_3 = 'C'
         else:
             type_3 = 'E'
-        if score_P >= score_I:
+        if score_P <= score_I:
             type_4 = 'I'
         else:
             type_4 = 'P'
