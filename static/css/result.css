@@ -75,13 +75,3 @@
   width: 220px;
   transform: translateX(74px) translateY(-135px);
 }
-
-@media screen and (max-width: 370px) {
-  .result-wrap {
-    height: 340px;
-  }
-  
-  .haedal-type-talk img{
-    transform: translateX(74px) translateY(-173px);
-  }
-}

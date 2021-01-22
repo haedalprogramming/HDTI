@@ -51,11 +51,11 @@ body {
     .charger-wrap {
         position: absolute;
         top: 4.3%!important;
-        left: 7% !important;
-        width: 90% !important;
+        left: 6% !important;
+        width: 92% !important;
     }
     .charger {
-        width: 2.5% !important;
+        width: 2.7% !important;
         margin: 0 1px !important;
     }
 }
