@@ -103,7 +103,17 @@
     left: 273px;
 }
 
+.ok-btn__text {
+    position: absolute;
+    top: 42px;
+    left: 285px;
+    color: #fff;
+    font-size: 150%;
+    cursor: pointer;
+}
+
 .back-btn {
     top: 80px;
     left: 230px;
 }
+

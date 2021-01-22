@@ -26,7 +26,7 @@
         <img id="rightBtn" class="result-btn right-btn" src="../static/img/오른쪽화살표_빨강.svg" alt="버튼">
         <img id="downBtn" class="result-btn down-btn" src="../static/img/아래쪽화살표_빨강.svg" alt="버튼">
         <img id="leftBtn" class="result-btn left-btn" src="../static/img/왼쪽화살표_빨강.svg" alt="버튼">
-        <img id="okBtn" class="result-btn ok-btn" src="../static/img/OK.svg" alt="버튼">
+        <img id="okBtn" class="result-btn ok-btn" src="../static/img/OK.svg" alt="버튼"><span id="okText" class="ok-btn__text">ok</span>
         <a href="javascript:history.back();"><img id="backBtn" class="result-btn back-btn" src="../static/img/왼쪽화살표_파랑.svg" alt="버튼"></a>
     </div>
 {% endblock %}
@@ -40,6 +40,7 @@
     const downBtn = document.querySelector('#downBtn');
     const leftBtn = document.querySelector('#leftBtn');
     const okBtn = document.querySelector('#okBtn');
+    const okText = document.querySelector('#okText');
     let focusIdx = 0;
     let answersInput = document.querySelector('#answersInput');
 
@@ -108,6 +109,10 @@
     });
 
     okBtn.addEventListener('click', function() {
+        typesBtn[focusIdx].click();
+    });
+
+    okText.addEventListener('click', function() {
         typesBtn[focusIdx].click();
     });
 
