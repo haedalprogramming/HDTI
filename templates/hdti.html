@@ -51,9 +51,15 @@
     let indice = 0;
     let indices_idx = 0;
     let clickCnt = 0;
+    let clickHaedalCnt = 0;
     let answers = [];
 
     const haedalTalks = [
+                        '스마트폰 기종마다 화면이 깨질 수 있어요.',
+                        '반응형으로 짜는 건 너무 골치아파요.',
+                        '버그 고칠 수 있는 분은 customer@haedal.io로 메일 주세요.',
+                        '근데 제 아이폰에선 잘 되던데...',
+                        '화면이 깨지면 카카오톡 브라우저에서 실행해 보세요..',
                         '아무도 없네요.',
                         '코딩이 얼마나 재밌는데…!',
                         '로섬 아저씨처럼 코딩을 잘 하게 된다면 정말 좋겠네요.',
@@ -167,8 +173,13 @@
                     haedalTalkBubble.style.display = 'none';
                     answersInput.value = answers;
                 } else {
-                    let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
-                    haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
+                    if (clickHaedalCnt == 0) {
+                        haedalTalk.innerHTML = `<p>${haedalTalks[0]}</p>` 
+                        clickHaedalCnt += 1;
+                    } else {
+                        let randomIdx = Math.floor(Math.random() * (haedalTalks.length));
+                        haedalTalk.innerHTML = `<p>${haedalTalks[randomIdx]}</p>` 
+                    }
                     
                     haedalTalkBubble.style.display = 'block';
                     haedalTalk.appendChild(haedalTalkBubble);
