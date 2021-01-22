@@ -187,19 +187,8 @@ button:focus {
     overflow: hidden;
   }
   
-  .hdti-tutorial{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 7px;
-    position: absolute;
-    bottom: 4px;
-    color: #00ff4c;
-    font-size: 10px;
-  }
-  
   .haedal-talk {
-    top: 318px;
+    top: 300px;
   }
   
   .haedal-talk__bubble {
@@ -207,6 +196,6 @@ button:focus {
   }
   
   .btns {
-    top: 429px;
+    top: 400px;
   }
 }
