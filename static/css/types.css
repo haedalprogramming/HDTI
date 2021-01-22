@@ -111,15 +111,10 @@
 @media screen and (max-width: 370px) {
     .result-all-wrap {
         width: 77%;
-        row-gap: 3px;
-        column-gap: 4px;
+        row-gap: 6px;
     }
 
     .result-btns {
-        top: 385px;
-    }
-
-    .type-btn {
-        padding-bottom: 7px;
+        top: 400px;
     }
 }
